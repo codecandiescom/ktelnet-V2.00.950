@@ -1,0 +1,261 @@
+Changes in Kerberos Telnet for Windows 95 and Windows NT.
+
+Version 2.00.950	Released 2000-05-05
+-  Manual updated.
+
+Version 2.00.950 (BETA 000429)
+-  Fix nonworking serial port under Windows NT.
+-  Fix problems with registries values under Windows NT (incl.
+   installation script).
+
+Version 2.00.950 (BETA 000420)
+-  Fix problem when changing fonts. Other windows didn't get the
+   changed data.
+
+Version 2.00.950 (BETA 000405)
+-  Fix problem with KPOPPROXY when no TCP/IP exists, it looped and
+   used all memory of the machine.
+-  Automatically make a SITE KAUTH in KFTP if enable flag is set and
+   authentication is done
+-  Add command AFSLOG in KFTP.
+
+Version 2.00.950 (BETA 000318)
+-  Add profiles for serial-port.
+-  Add windows mapping to profile.
+-  Make it possible to give serial parameters on commandline
+
+Version 2.00.950 (BETA 000312)
+-  Final cleanup for release of beta.
+-  Manual updated.
+
+Version 2.00.950 (BETA 000302)
+-  Fix problem with disappearing Ctrl-Space mapping. (NUL problem)
+-  Remove selection if text in selection is changed.
+
+Version 2.00.950 (BETA 000227)
+-  Hide profile field in connect to box if only default profile exists.
+
+Version 2.00.950 (BETA 000224A)
+-  Bug in KFTP, incorrect handling of single files during upload.
+
+Version 2.00.950 (BETA 000224)
+-  Used signed char to index an array. Bad.
+
+Version 2.00.950 (BETA 000223)
+-  Added profiles for some settings during a connection:
+   Font (incl. character coding), translation map, terminal type,
+   and keymap
+
+Version 2.00.950 (BETA 000213)
+-  Paste didn't work when not connected (used for debugging purposes).
+
+-  Add translation table for sent and received data over telnet
+   connection.
+
+Version 2.00.950 (BETA 000210)
+-  Add support for other character sets than Western.
+
+Version 2.00.950 (BETA 000205)
+-  Better logging when connection through a proxy server.
+
+-  When sending an assigned string to a key don't do character
+   conversion. Needed for sending binary data.
+
+Version 2.00.950 (BETA 000112)
+-  Fix something that was an unimplemented feature in KFTP that
+   became a requiremnt in KTH-KRB V1.0: Encryption level of
+   SITE KAUTH command.
+
+Version 2.00.950 (BETA 000109)
+-  Add new option '-i' to KTELNET to set name of reported terminal-type.
+
+-  Fix problem with multiple selection in KFTP Upload.
+
+-  Resizable sub windows in KFTP.
+
+Version 2.00.950 (BETA 000104)
+-  Make Abort Output and Interrupt process junk received but
+   not yet displayed data in KTelnet.
+
+Version 2.00.950 (BETA 991209)
+-  KFTP: Skip . and .. as UNIX filenames.
+
+-  Add suport for VMS system in KFTP.
+
+
+Version 2.00.950 (BETA 991129)
+-  New graphical FTP interface
+
+-  Support for firewalls with HTTP connect option
+
+
+Version 1.02.950
+
+-  Bug fixed in Ticket Manager (thanks to Nick Lloyd <lloyd@irg.usask.ca>:
+   If a negative timezone was used the ticketmanager could not start.
+
+-  Bug found in WinNT and FTP: 'shutdown' must be called on
+   datastream, otherwise server may loose end of file (server
+   responds with 'Connection reset by peer').
+
+-  Command 'Rename' was missing from FTP.
+
+-  Added command 'AFSLOG' to FTP client.
+
+-  Could not send file already opened by another process.
+
+-  Attempt to fix problem with Ticket Manager on WinNT when no
+   tickets exist.
+
+-  Fix problem with paste of large chunks. Telnet connection
+   could hang.
+
+Version 1.01.950
+
+-  Correctly compiles and run with Borland C++ 5.02
+
+-  Correct problem with KPopProxy, it didn't handled a slow client
+   correctly.
+
+-  Add code from Joakim Petersson <d95-jpe@nada.kth.se>: Make it
+   possible to directly print selected text.
+
+
+Version 1.00.950
+
+-  KPOP-proxy added
+
+-  Possible to change serial parameters during open session.
+
+-  Fix bug with garbage below last line.
+
+-  If tickets no longer are valid (for some reason) tickets may be
+   destroyed, new tickets obtained and connection retried.
+
+-  Possible to start KTELNET to go directly to selected page of
+   open connection dialog.
+
+-  Y2K tested.
+
+-  Fix bad handling of time in Borland C RTL, kdc_timesync no longer
+   needed during summertime.
+
+
+Version 0.90F.950	Never released
+
+-  Begin implementation of KPOP-Proxy.
+
+-  Fix bug in FTP mode: Sometimes input wasn't recognized. Some semaphores
+   wasn't deallocted in the destructor of FTPMachine.
+
+
+Version 0.90E.950	First BETA release, 990124
+
+-  Bug fixed: Sometimes a character was displayed with delay and in some
+   cases one single character could be lost.
+
+-  Basic FTP functions with kerberos authentication
+
+-  Special handling if NAT (Network Address Translation) is used between
+   us and the kerberos server. Must be enabled with 'krb.extra/nat_in_use'
+   set to Yes.
+
+-  Moved registry data from 'HKEY_CURRENT_USER\Software\Kerberos' to
+   'HKEY_LOCAL_MACHINE\Software\Kerberos'.
+
+-  A problem found in kerberos-library: If two differnt username was
+   used in two realms at the same time wrong username could be associated
+   to a ticket in the ticketfile.
+
+-  Add two new flags: One to disable warning message when closing down
+   program, the other to start logindialog in password box if username
+   and realm was given (or known).
+
+
+Version 0.90D.950	Fifth ALPHA release
+
+-  Prepare for release of source code, restructure source code tree.
+
+-  Add function 'Change Password' in ticket-manager.
+
+-  Add basic suport for normal terminal via serial port.
+
+-  The usage of C:\ETC\KRB.CONF removed, information now put into
+   the registry. 
+
+-  Change to multithread version of libraries.
+
+-  Import of keymap didn't saved data in registry.
+
+-  Windows98 had some strange ideas about default directory in
+   save/open common dialog....
+
+-  Bug found (levitte@stacken.kth.se) in attribute reset in terminal-
+   emulator.
+
+-  Bug found: If connection was closed by peer when password dialog
+   box was shown, Ktelnet crashed when dialog box was closed.
+
+
+Version 0.90C.950	Fourth ALPHA release
+
+-  Add capture of text into file.
+
+-  Add sending of text file.
+
+-  Add printer suport.
+
+-  Corrected bug in KRB.DLL, kdc_timesync didn't work. New version of
+   KRB.DLL is 4.0.9.9B
+
+-  Corrected bug in KTELNET, sometimes some TELNET options were missed
+   by the TELNET machine, shown as garbage on the screen.
+
+-  Corrected bug in KTELNET, sometimes a ticket manager was started in
+   hidden mode.
+
+
+Version 0.90B.950	Third ALPHA release
+
+-  Mapping of keys added.
+
+-  Flag for autowrap added in setup.
+
+-  Command for reset of terminal emulator added.
+
+-  Caret placed wrong in dialog-boxes after program getting focus and
+   main window needed to be redrawn.
+
+-  Ticket manager added, started with option -m of KTELNET.EXE. Possible
+   to have ticketmanager reside on system tray.
+
+-  If first character of hostname is '\' (backslash) Kerberos authentication
+   is disabled for this connection. If the first character of the hostname
+   is '\' and the rest of the hostname is a standard dotted IP-address no use
+   of DNS is attempted.
+
+
+Version 0.90A.950	Second ALPHA release
+
+-  Cut and Past functionality added.
+
+-  The usage of C:\ETC\KRB.REALMS and C:\ETC\KRB.EXTRA removed,
+   information now put into the registry. 
+
+-  Setting of windows title implemented.
+
+-  Bufferthandling routines for received data rewritten (except for
+   broken code a *BIG* memory leak was fixed).
+
+-  Some minor bugs discovered with VTTEST found and corrected.
+
+-  One major bug fixed: The 'Funny Scroll Region' test of VTTEST
+   crashed the KTELNET application.
+
+-  Configurable size of scrollback buffer implemented.
+
+-  Deleting tickets when you didn't have any tickets crashed the
+   application. 
+
+
+Version 0.90.950	First ALPHA release

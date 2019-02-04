@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 1998 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#define IDI_TICKETS		1001
+
+#define IDM_TICKETS		1200  // Menu resource ID and Accelerator IDs
+#define IDM_TRAYPOPUP		1201
+
+#define CM_SHOWTICKETS		101
+#define CM_SETUP		102
+#define CM_CLOSE		103
+#define CM_EXIT                 24310
+#define CM_HELPABOUT            24389
+#define CM_HIDE			106
+#define CM_KRBCPW		108
+
+#define CM_REFRESH		1200
+
+#define CM_KRBREFRESH		1200
+#define IDC_TEXT		1201
+#define CM_KRBCLEAR		1202
+#define CM_KRBLOGIN		1203
+
+#define IDD_KRBCPW		1201
+#define IDC_CPWUSER		101
+#define IDC_CPWINST		102
+#define IDC_CPWREALM		103
+#define IDC_CPWOLD		104
+#define IDC_CPWNEW		105
+#define IDC_CPWVER		106
+
+#define IDS_TICKETW		1280
+#define IDS_NOTICKETCUE		1281
+#define IDS_RCLEAR		1282
+#define IDS_PSWNEQ		1283
+#define IDS_BADPSW		1284
+#define IDS_UNKKERR		1285
+#define IDS_WINIT		1286
+#define IDS_PSWCOK		1287
+#define IDS_PSWULOSE		1288
+

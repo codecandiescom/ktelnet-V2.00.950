@@ -1,0 +1,87 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-01-06 at 18:53:38 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+BCC32I  = Bcc32i +BccW32.cfg 
+TLINK32 = TLink32
+ILINK32 = Ilink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+LinkerLocalOptsAtC32_etcompdexe =  -Tpe -ap -c
+ResLocalOptsAtC32_etcompdexe = 
+BLocalOptsAtC32_etcompdexe = 
+CompInheritOptsAt_etcompdexe = -IC:\BC5\INCLUDE;..\INCLUDE\WIN32;..\INCLUDE -D_RTLDLL;
+LinkerInheritOptsAt_etcompdexe = -x
+LinkerOptsAt_etcompdexe = $(LinkerLocalOptsAtC32_etcompdexe)
+ResOptsAt_etcompdexe = $(ResLocalOptsAtC32_etcompdexe)
+BOptsAt_etcompdexe = $(BLocalOptsAtC32_etcompdexe)
+
+#
+# Dependency List
+#
+Dep_wutil = \
+   etcomp.exe
+
+all: wutil
+	copy etcomp.exe ..\wbin\etcomp.exe
+
+!include "..\common.mak"
+ 
+wutil : BccW32.cfg $(Dep_wutil)
+  echo MakeNode
+
+Dep_etcompdexe = \
+   ..\lib\roken.lib\
+   etcomp.obj
+
+etcomp.exe : $(Dep_etcompdexe)
+  $(ILINK32) @&&|
+ /v $(IDE_LinkFLAGS32) $(LinkerOptsAt_etcompdexe) $(LinkerInheritOptsAt_etcompdexe) +
+C:\BC5\LIB\c0x32.obj+
+etcomp.obj
+$<,$*
+..\lib\roken.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+|
+
+etcomp.obj :  etcomp.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_etcompdexe) $(CompInheritOptsAt_etcompdexe) -o$@ etcomp.c
+|
+
+# Compiler configuration file
+BccW32.cfg : 
+   Copy &&|
+-w
+-R
+-v
+-WM-
+-vi
+-H
+-H=etcomp.csm
+-WM
+-WC
+-H-
+| $@
+
+

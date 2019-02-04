@@ -1,0 +1,87 @@
+//****************************************************************
+//
+//	XRTL.RC
+//
+//****************************************************************
+
+#include <wxrtl.rh>
+
+IDM_PRPLIST MENU
+{
+  MENUITEM "Delete entry", CM_PLDELETE
+  MENUITEM "Change", CM_PLRENAME
+  MENUITEM "Change", CM_PLVALUE
+  MENUITEM "Add entry", CM_PLADD
+  MENUITEM "Import", IDC_PLIMPORT
+  MENUITEM "Export", IDC_PLEXPORT
+}
+
+
+IDD_EDITITEM DIALOG 162, 102, 152, 88
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Change value"
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "LabelHdr", IDC_EILABELHDR, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 8, 4, 136, 12
+ CONTROL "Label", IDC_EILABEL, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 8, 16, 136, 12
+ CONTROL "ValueHdr", IDC_EIVALUEHDR, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 8, 36, 136, 12
+ CONTROL "Value", IDC_EIVALUE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 8, 48, 136, 12
+ CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 16, 68, 50, 14
+ CONTROL "Cancel", IDCANCEL, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 90, 68, 50, 14
+}
+
+IDD_SHOWRESP DIALOG 0, 0, 408, 166
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_OVERLAPPED | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Message"
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "", IDC_SRINFO, "edit", ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP, 2, 2, 402, 132
+ CONTROL "Close", IDOK, "BUTTON", BS_DEFPUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 179, 142, 50, 14
+}
+
+STRINGTABLE
+{
+ IDSR_WXRTL, "KTelnet Supplementary RunTime Library"
+ IDSR_NEW, "New"
+ IDSR_LABDEL, "Delete %s %s?"
+ IDSR_CONFDEL, "Confirm deletion"
+ IDSR_EXPORTERR, "I/O error when exporting data to\n%s\n%s"
+ IDSR_IOERR, "I/O Error"
+ IDSR_IMPORTERR, "I/O error when importing data from\n%s\n%s"
+ IDSR_IMPSYNTAX, "Format error on line %u\n%s"
+ IDSR_CONFCLR, "Clear current list before importing new?"
+ IDSR_IMPALRDY, "%s %s already exists (%s),\noverwrite with %s?"
+ IDSR_CONOVR, "Confirm overwrite"
+ IDSR_ZEROLEN, "%s %s has zero value"
+ IDSR_DATERR, "Data error"
+ IDSR_REGERR, "Can't write to registry\n%s"
+}
+
+1 VERSIONINFO 
+FILEVERSION 4, 1, 0, 950
+PRODUCTVERSION 2, 0, 0, 950
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904E4"
+  {
+   VALUE "CompanyName", "KTH & Stacken Computer Club\000"
+   VALUE "FileDescription", "Kerberos Telnet Borland C++ Runtime Extensions\000"
+   VALUE "FileVersion", "4.10.950\000\000"
+   VALUE "InternalName", "WXRTL\000"
+   VALUE "LegalCopyright", "Copyright © KTH & Stacken Computer Club 1998-2000\000"
+   VALUE "OriginalFilename", "WXRTL.DLL\000"
+   VALUE "ProductName", "KTELNET\000"
+   VALUE "ProductVersion", "2.00.950\000"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x409, 1252
+ }
+
+}

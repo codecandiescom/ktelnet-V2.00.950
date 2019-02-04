@@ -1,0 +1,170 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-05-16 at 19:02:23 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+BCC32I  = Bcc32i +BccW32.cfg 
+TLINK32 = TLink32
+ILINK32 = Ilink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_ktcommondlib =  -Tpd -aa -V4.0 -c
+ResLocalOptsAtW32_ktcommondlib = 
+BLocalOptsAtW32_ktcommondlib = 
+CompInheritOptsAt_ktcommondlib = -IC:\BC5\INCLUDE;..\KRB\LIB\KCLIENT;..\..\INCLUDE;..\..\INCLUDE\WIN32 -D_RTLDLL;_BIDSDLL;_OWLDLL;STRICT;_OWLPCH;;HAVE_CONFIG_H;_KTCOMMON_DLL
+LinkerInheritOptsAt_ktcommondlib = -x
+LinkerOptsAt_ktcommondlib = $(LinkerLocalOptsAtW32_ktcommondlib)
+ResOptsAt_ktcommondlib = $(ResLocalOptsAtW32_ktcommondlib)
+BOptsAt_ktcommondlib = $(BLocalOptsAtW32_ktcommondlib)
+
+#
+# Dependency List
+#
+Dep_KtCommon = \
+   ..\..\WBin\ktcommon.lib
+
+all: KtCommon
+	@echo KtCommon built
+
+!include "..\..\common.mak"
+ 
+KtCommon : BccW32.cfg $(Dep_KtCommon)
+  echo MakeNode
+
+..\..\WBin\ktcommon.lib : ..\..\WBin\ktcommon.dll
+  $(IMPLIB) $@ ..\..\WBin\ktcommon.dll
+
+
+Dep_ktcommonddll = \
+   ..\..\lib\roken.lib\
+   ..\..\lib\krb.lib\
+   ..\..\lib\kadm.lib\
+   ..\..\lib\des.lib\
+   ..\..\lib\wxrtl.lib\
+   OBJS\ktftp.obj\
+   OBJS\connect.obj\
+   OBJS\about.obj\
+   OBJS\bstream.obj\
+   OBJS\kclient.obj\
+   OBJS\logwnd.obj\
+   OBJS\setup.obj\
+   OBJS\ktcommon.obj\
+   OBJS\ktcommon.res
+
+..\..\WBin\ktcommon.dll : $(Dep_ktcommonddll)
+  $(ILINK32) @&&|
+ /v $(IDE_LinkFLAGS32) $(LinkerOptsAt_ktcommondlib) $(LinkerInheritOptsAt_ktcommondlib) +
+C:\BC5\LIB\c0d32.obj+
+OBJS\ktftp.obj+
+OBJS\connect.obj+
+OBJS\about.obj+
+OBJS\bstream.obj+
+OBJS\kclient.obj+
+OBJS\logwnd.obj+
+OBJS\setup.obj+
+OBJS\ktcommon.obj
+$<,$*
+..\..\lib\roken.lib+
+..\..\lib\krb.lib+
+..\..\lib\kadm.lib+
+..\..\lib\des.lib+
+..\..\lib\wxrtl.lib+
+C:\BC5\LIB\owlwti.lib+
+C:\BC5\LIB\bidsti.lib+
+C:\BC5\LIB\ctl3d32.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+OBJS\ktcommon.res
+
+|
+
+OBJS\ktftp.obj :  ktftp.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ ktftp.cpp
+|
+
+OBJS\connect.obj :  connect.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ connect.cpp
+|
+
+OBJS\about.obj :  about.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ about.cpp
+|
+
+OBJS\bstream.obj :  bstream.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ bstream.cpp
+|
+
+OBJS\kclient.obj :  kclient.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ kclient.cpp
+|
+
+OBJS\logwnd.obj :  logwnd.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ logwnd.cpp
+|
+
+OBJS\setup.obj :  setup.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ setup.cpp
+|
+
+OBJS\ktcommon.obj :  ktcommon.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib) -o$@ ktcommon.cpp
+|
+
+OBJS\ktcommon.res :  ktcommon.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib)  -FO$@ ktcommon.rc
+|
+OBJS\setup.res :  setup.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib)  -FO$@ setup.rc
+|
+OBJS\kclient.res :  kclient.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib)  -FO$@ kclient.rc
+|
+OBJS\ktftp.res :  ktftp.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ktcommondlib) $(CompInheritOptsAt_ktcommondlib)  -FO$@ ktftp.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.bcp
+   Copy &&|
+-w
+-R
+-v-
+-vi
+-H
+-H=OBJS\KTCOMMON.CSM
+-WM
+-WD
+-y
+| $@
+
+

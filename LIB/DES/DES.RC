@@ -1,0 +1,29 @@
+
+1 VERSIONINFO 
+FILEVERSION 0, 0, 2, 950
+PRODUCTVERSION 0, 0, 2, 950
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904E4"
+  {
+   VALUE "CompanyName", "KTH & Stacken Computer Club\000"
+   VALUE "FileDescription", "KRB4/DES Suport routines\000"
+   VALUE "FileVersion", "0.0.2.950\000"
+   VALUE "InternalName", "DES\000"
+   VALUE "LegalCopyright", "Copyright \251 KTH & Stacken Computer Club. 1996-1999\000"
+   VALUE "OriginalFilename", "DES.DLL\000"
+   VALUE "ProductName", "Kerberos/Win95/NT\000"
+   VALUE "ProductVersion", "0.0.2.950\000"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x0409, 1252
+ }
+
+}

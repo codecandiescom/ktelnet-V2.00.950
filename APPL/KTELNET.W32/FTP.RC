@@ -1,0 +1,98 @@
+/*
+ * Copyright (c) 1999 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#include "ftp.rh"
+#include "wxrtl.rh"
+
+STRINGTABLE
+{
+  -11, "ParseErrors"
+  IDS_PARAMB, "Ambigous command: "
+  IDS_PARUNK, "Unknown command: "
+  IDS_PARAMIS, "Argument missing"
+}
+
+STRINGTABLE
+{
+  -3, "FTPMachine"
+  IDS_FMCEC, "Can't establish connection\n"
+  IDS_FMUTL, "Unable to login, closing connection\n"
+  IDS_FTPPROMPT, "FTP>"
+  IDS_FMABORT, "\nOperation aborted\n"
+  IDS_FMUTWLF, "\nUnable to write to local file %s: %s\n"
+  IDS_FMCWDNR, "CWD command not recognized, trying XCWD\n"
+  IDS_FMPWDNR, "PWD command not recognized, trying XPWD\n"
+  IDS_FMGFPNE, "GetFullPathName: %s\n"
+  IDS_FMDIROF, "Directory of %s\n\n"
+  IDS_FMFAILED, "Failed: %s\n"
+  IDS_FMTOTBIG, "\n\tTotal size >= 4096 GB\n"
+  IDS_FMTOTSIZ, "\n\tTotal size %ld bytes\n"
+  IDS_FMCCLD, "Can't change local directory: %s\n"
+  IDS_FMCGLD, "Can't get local directory: %s\n"
+  IDS_HLPGET, "Usage: GET <remotefile> [<localfile>]\n"
+  IDS_HLPPUT, "Usage: PUT <localfile> [<remotefile>]\n"
+  IDS_HLPDIR, "Usage: DIR [remote-path [localfile]]\n"
+  IDS_PASSIVEON, "Passive mode is on\n"
+  IDS_PASSIVEOFF, "Passive mode is off\n"
+  IDS_PSMISS, "%s: Argument missing"
+  IDS_HASHON, "Printing of '#' for every 1K is on\n"
+  IDS_HASHOFF, "Printing of '#' is off\n"
+  IDS_TRFBIN, "Using BINARY mode for file transfer\n"
+  IDS_TRFASC, "Using ASCII mode for file transfer\n"
+  IDS_TRFT20, "Using TENEX mode for file transfer\n"
+  IDS_ARGIGN, "Warning: Argument to command is ignored\n"
+  IDS_HLPKAUTH, "KAUTH [principal]\n"
+  IDS_KAFAIL, "KAUTH failed\n"
+  IDS_KLFAIL, "KLIST failed\n"
+  IDS_KDFAIL, "KDESTROY failed\n"
+  IDS_HLPMPUT, "Usage: MPUT wildcard\n"
+  IDS_HLPMGET, "Usage: MGET wildcard\n"
+  IDS_PROMPTON, "Prompt mode is on\n"
+  IDS_PROMPTOFF, "Prompt mode is off\n"
+  IDS_TRFFP, "Transfer file %s ? "
+  IDS_YESCHARS, "Yy"
+  IDS_HLPRM, "Usage: RM remotefile\n       DELETE remotefile\n"
+  IDS_HLPMKDIR, "Usage: MKDIR remotedirectory\n"
+  IDS_HLPRMDIR, "Usage: RMDIR remotedirectory\n"
+  IDS_HELP, "KTelnet FTP client accepts the following commands:\nASCII, BINARY, BYE, CD, CWD, DELETE, DIRECTORY, EXIT, GET, HASH, HELP,\nKAUTH, KDESTROY, KLIST, LDIRECTORY, LCD, LCWD, LOCALDIRECTORY, LOCALCD,\nLOCALCWD, LS, MGET, MKDIR, MPUT, PASSIVE, PROMPT, PUT, PWD, QUIT, RM,\nRMDIR and TENEX\n"
+  IDS_FMTCMPLE, "\nTransfer complete, %ld bytes\n"
+  IDS_HLPAFSLOG, "Usage: AFSLOG [cell]\n"
+  IDS_ALFAIL, "AFSLOG failed\n"
+  IDS_HLPRENAME, "Usage: RENAME old-name new-name\n"
+}
+

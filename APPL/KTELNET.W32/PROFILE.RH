@@ -1,0 +1,107 @@
+/*
+ * Copyright (c) 1998-2000 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+
+// Keymap-boxen
+#define IDD_KEYMAP		1002
+#define IDC_KMKEY		101
+#define IDC_KMCTRL		102
+#define IDC_KMSHIFT		103
+#define IDC_KMALT		104
+#define IDC_KMDWIN		105
+#define IDC_KMDCMD		106
+#define IDC_KMDCOP		107
+#define IDC_KMSS		108
+#define IDC_KMSSTR		109
+#define IDC_KMDELETE		110
+#define IDC_KMKSEL		111
+#define IDC_KMNOTE		112
+
+#define IDD_CODEINPUT		1009
+#define IDD_CODEOUTPUT		1010
+#define IDC_CDLIST		201
+#define IDC_CDADD		202
+#define IDC_CDDEL		203
+#define IDC_CDCHANGE		204
+#define IDC_CDCLEAR		205
+#define IDC_CDWINTLT		206
+
+#define IDD_CDEDITITEM		1011
+#define IDC_CDLABELHDR		101
+#define IDC_CDLABEL		102
+#define IDC_CDVALUEHDR		103
+#define IDC_CDVALUE		104
+
+// Profile box
+#define IDD_PROFILE		1012
+#define IDC_PROFILE		301
+#define IDC_PROFDEL		302
+#define IDC_PROFNEW		303
+#define IDC_PROFONT		304
+#define IDC_PROFONTSEL		305
+#define IDC_PROPRFONT		306
+#define IDC_PROPRFONTSEL	307
+#define IDC_PROTERMTYPE		308
+
+#define IDS_TERMSET		7000
+#define IDS_KMTRACK		7001
+#define IDS_KMLETTER		7002
+#define IDS_KMDIGIT		7003
+#define IDS_KMCODE		7004
+#define IDS_KMEXTS		7005
+#define IDS_EXPORTERR		7006
+#define IDS_IMPORTERR		7007
+#define IDS_IMPSYNTAX		7008
+#define IDS_KMEXPTO		7009
+#define IDS_KMIMPFROM		7010
+#define IDS_KMCLR		7011
+#define IDS_KMICODE		7012
+#define IDS_KMICMDE		7013
+#define IDS_KMILTL		7014
+#define IDS_TRANS		7015
+#define IDS_TO			7016
+#define IDS_LABDEL		7017
+#define IDS_CONFDEL		7018
+#define IDS_CHANGED		7019
+#define IDS_NEWPROF		7020
+#define IDS_CANPROF		7021
+#define IDS_DELPROF		7022
+#define IDS_CONFCLR		7023
+
+#define IDS_KMKEYS		7100
+

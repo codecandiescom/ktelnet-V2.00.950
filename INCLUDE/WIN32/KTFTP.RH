@@ -1,0 +1,90 @@
+/*
+ * Copyright (c) 1998 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#define IDS_NOAUTH	10300
+#define IDS_OOFM	10301
+#define IDS_UTGT	10302
+#define IDS_WCGNIPA	10303
+#define	IDS_UNIPA	10304
+#define	IDS_TONPM	10305
+#define	IDS_LAIS	10306
+#define	IDS_RAIS	10307
+#define IDS_SDAAD	10308
+#define IDS_SDSSR	10309
+#define IDS_FTDB64	10310
+#define	IDS_ERRFS	10311
+#define	IDS_BADCK	10312
+#define	IDS_TRYP	10313
+#define IDS_CDD		10314
+#define IDS_BADRPLY	10315
+#define IDS_PRIPASS	10316
+#define IDS_KV4NS	10317
+#define	IDS_KV4RJ	10318
+#define	IDS_NOSEC	10319
+#define IDS_ERCR	10320
+#define IDS_ERCF	10321
+#define IDS_ERCC	10322
+#define IDS_EUCS	10323
+#define IDS_EUFH	10324
+#define IDS_EUEC	10325
+#define IDS_EUSD	10326
+#define IDS_CONTO	10327
+#define IDS_CONFAILED	10328
+#define IDS_CONNECTING	10329
+#define IDS_CONNECTED	10330
+#define IDS_CONCLOSE	10331
+#define IDS_CRYPTOFF	10332
+#define IDS_CRYPTON	10333
+#define	IDS_CNRFCS	10334
+#define	IDS_NONFTP	10335
+#define IDS_CWABLF	10336
+#define	IDS_PMNAS	10337
+#define	IDS_PMASC	10338
+#define	IDS_CPPMS	10339
+#define	IDS_SFDCC	10340
+#define IDS_RECVFILE	10341
+#define IDS_FMCOLF	10342
+#define IDS_FMCWLF	10343
+#define IDS_FMTCMPLE	10344
+#define IDS_SENDFILE	10345
+#define IDS_FMCRLF	10346
+#define IDS_FMNAME	10347
+#define IDS_FMPSW1	10348
+#define IDS_FMPSW2	10349
+#define IDS_FMACCOUNT	10350
+#define IDS_OPC		10351

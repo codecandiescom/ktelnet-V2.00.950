@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 1998 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#include "ktftp.rh"
+
+STRINGTABLE
+{
+  IDS_NOAUTH, "\n[ No authentication done, using plain user and password ]\n"
+  IDS_OOFM, "Out of memory\n"
+  IDS_UTGT, "Unable to get ticket: %s\n"
+  IDS_WCGNIPA, "Warning, can't get my NAT IP address for realm %s\n"
+  IDS_UNIPA, "Using NAT IP address (%s) for kerberos 4\n"
+  IDS_TONPM, "Turing on PASSIVE mode for data transfers\n"
+  IDS_LAIS, "Local address is: %s\n"
+  IDS_RAIS, "Remote address is: %s\n"
+  IDS_SDAAD, "Server didn't accept auth data.\n"
+  IDS_SDSSR, "Server didn't send adat reply.\n"
+  IDS_FTDB64, "Can't decode base64 data from server.\n"
+  IDS_ERRFS, "Error reading reply from server: %s.\n"
+  IDS_BADCK, "Bad checksum returned from server.\n"
+  IDS_TRYP, "Trying principal: %s\n"
+  IDS_CDD, "Can't decrypt data\n"
+  IDS_BADRPLY, "Bad reply from server.\n"
+  IDS_PRIPASS, "Password for "
+  IDS_KV4NS, "Kerberos V4 is not supported by the server.\n"
+  IDS_KV4RJ, "Kerberos V4 rejected as security mechanism.\n"
+  IDS_NOSEC, "The server doesn't understand the FTP security extensions.\n"
+  IDS_ERCR, "Connection reset to:\n%s"
+  IDS_ERCF, "Unable to receive data from host:\n%s\nReason: %s"
+  IDS_ERCC, "Connection closed to:\n%s"
+  IDS_EUCS, "Unable to create socket"
+  IDS_EUFH, "Unable to find host:\n%s\nReason: %s"
+  IDS_EUEC, "Unable to establish connection to:\n%s\nReason: %s"
+  IDS_EUSD, "Unable to send data to host:\n%s\nReason: %s"
+  IDS_CONTO, "[ FTP Connected to %s ]\n"
+  IDS_CONFAILED, ": Connection failed"
+  IDS_CONNECTING, ": Connecting"
+  IDS_CONNECTED, ": Connected"
+  IDS_CONCLOSE, ": Closed"
+  IDS_CRYPTOFF, "Encryption off"
+  IDS_CRYPTON, "Encryption on"
+  IDS_CNRFCS, "Can't read from controlstream: %s\n"
+  IDS_NONFTP, "Non FTP reply: %s\n"
+  IDS_CWABLF, "Can't write all bytes to file"
+  IDS_PMNAS, "Passive mode not accepted by server\n"
+  IDS_PMASC, "Passive mode address scan failure. Shouldn't happen!\n"
+  IDS_CPPMS, "Can't parse passive mode string.\n"
+  IDS_SFDCC, "\nSend failed, datachannel closed during transfer\n"
+  IDS_RECVFILE, "\033[1mReceiving remote file %s as %s\033[m\n"
+  IDS_FMCOLF, "Can't open local file %s: %s\n"
+  IDS_FMCWLF, "\nCan't write to local file %s: %s\n"
+  IDS_FMTCMPLE, "\nTransfer complete, %ld bytes\n"
+  IDS_SENDFILE, "\033[1mSending local file %s as %s\033[m\n"
+  IDS_FMCRLF, "\nCan't read from local file %s: %s\n"
+  IDS_FMNAME, "Name ("
+  IDS_FMPSW1, "Password (%s): "
+  IDS_FMPSW2, "Password: "
+  IDS_FMACCOUNT, "Account: "
+  IDS_OPC, "\n[ Operation cancelled by user ]\n"
+}

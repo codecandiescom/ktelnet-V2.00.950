@@ -1,0 +1,238 @@
+/*
+ * Copyright (c) 1999 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+
+#define IDB_KTHLOGO	101
+#define IDB_STACKENLOGO	102
+#define IDB_UPDIR	103
+#define IDB_NEWDIR	104
+#define IDB_STOP	105
+#define IDB_UPLOAD	106
+#define IDB_DOWNLOAD	107
+#define IDB_TRASH	108
+#define IDB_AUTH	109
+
+#define IDI_STDICON	1000
+#define IDI_DIR		1001
+#define IDI_OPENDIR	1002
+#define IDI_FILE	1003
+#define IDI_LINK	1004
+
+#define MDI_MENU	100	     // Menu resource ID and Accelerator IDs
+#define IDM_POPUP	101
+#define IDM_TREEPOPUP	102
+#define IDM_FILEPOPUP	103
+
+#define CM_SHOWTICKETS		101
+#define CM_SETUP		102
+#define CM_OPENCONN		103
+#define CM_CLOSECONN		104
+#define CM_DOWNLOAD		105
+#define CM_UPLOAD		106
+#define CM_EDITTREELABEL	107
+#define CM_EDITFILELABEL	108
+#define CM_DELETEFILE		109
+#define CM_OPENDIR		110
+#define CM_MKDIR		111
+#define CM_UPDIR		112
+#define CM_STOP			113
+//				114
+//				115
+#define	CM_REMAUTH		116
+#define CM_REMDEST		117
+#define CM_REMLIST		118
+#define CM_RENAME		119
+#define CM_REFRESH		120
+#define CM_UPLOADLW		130
+#define CM_AFSLOG		131
+
+#define CM_TEST			149
+#define CM_TEST1		150
+#define CM_TEST2		151
+#define CM_TEST3		152
+
+#define CM_EXIT                 24310
+
+#define CM_MDIFILENEW           24331
+#define CM_FILESAVE             24333
+#define CM_FILESAVEAS           24334
+#define CM_FILEPRINT            24337
+#define CM_FILEPRINTERSETUP     24338
+#define CM_FILEPRINTPREVIEW     24340
+#define CM_FILE_SAVET		24341
+
+#define CM_EDITFIND             24351
+#define CM_EDITREPLACE          24352
+#define CM_EDITFINDNEXT         24353
+
+#define CM_CASCADECHILDREN      24361
+#define CM_ARRANGEICONS         24364
+#define CM_CLOSECHILDREN        24365
+#define CM_CREATECHILD          24366
+
+#define CM_HELPABOUT            24389
+
+#define IDS_UNKHST		5002
+#define IDS_CLOPEN		5003
+#define IDS_NEWSIZE		5004
+#define IDS_NOTCONN		5005
+#define IDS_CMDLINE		5006
+#define IDS_ESTKMGR		5007
+#define IDS_ESTNCON		5008
+#define IDS_TESTTYPES		5009
+#define IDS_ALLFILES		5010
+#define IDS_DUPLICATE		5011
+#define IDS_DELOBJS		5012
+#define IDS_REMPATH		5013
+#define IDS_CONNTO		5014
+#define IDS_PORTS		5015
+#define	IDS_FMCEC		5016
+#define	IDS_FMUTL		5017
+#define IDS_KAFAIL		5018
+#define IDS_KLFAIL		5019
+#define IDS_KDFAIL		5020
+#define IDS_FMCWDNR		5021
+#define IDS_FMABORT		5022
+#define IDS_CNGLIST		5023
+#define IDS_DOWNLOAD		5024
+#define IDS_UPLOAD		5025
+#define IDS_REOPEN		5026
+#define IDS_PLCLSE		5027
+#define IDS_DOWNTO		5028
+#define IDS_NEWDIR		5029
+#define IDS_REMAUTH		5030
+#define IDS_AFSLOGFAIL		5031
+#define IDS_AFSLOG		5032
+
+//
+// OWL defined strings
+//
+
+#define IDS_MODES               32530
+
+#define IDS_CANNOTFIND          32540
+
+#define IDS_UNTITLED            32550
+#define IDS_UNABLEREAD          32551
+#define IDS_UNABLEWRITE         32552
+#define IDS_FILECHANGED         32553
+#define IDS_FILEFILTER          32554
+
+#define IDS_UNKNOWNEXCEPTION    32767
+#define IDS_OWLEXCEPTION        32766
+#define IDS_OKTORESUME          32765
+#define IDS_UNHANDLEDXMSG       32764
+#define IDS_UNKNOWNERROR        32763
+#define IDS_NOAPP               32762
+#define IDS_OUTOFMEMORY         32761
+#define IDS_INVALIDMODULE       32760
+#define IDS_INVALIDMAINWINDOW   32759
+
+#define IDS_INVALIDWINDOW       32709
+#define IDS_INVALIDCHILDWINDOW  32708
+#define IDS_INVALIDCLIENTWINDOW 32707
+
+#define IDS_CLASSREGISTERFAIL   32749
+#define IDS_CHILDREGISTERFAIL   32748
+#define IDS_WINDOWCREATEFAIL    32747
+#define IDS_WINDOWEXECUTEFAIL   32746
+#define IDS_CHILDCREATEFAIL     32745
+
+#define IDS_MENUFAILURE         32744
+#define IDS_VALIDATORSYNTAX     32743
+#define IDS_PRINTERERROR        32742
+
+#define IDS_LAYOUTINCOMPLETE    32741
+#define IDS_LAYOUTBADRELWIN     32740
+
+#define IDS_GDIFAILURE          32739
+#define IDS_GDIALLOCFAIL        32738
+#define IDS_GDICREATEFAIL       32737
+#define IDS_GDIRESLOADFAIL      32736
+#define IDS_GDIFILEREADFAIL     32735
+#define IDS_GDIDELETEFAIL       32734
+#define IDS_GDIDESTROYFAIL      32733
+#define IDS_INVALIDDIBHANDLE    32732
+
+#define IDS_PRNON               32590
+#define IDS_PRNERRORTEMPLATE    32591
+#define IDS_PRNOUTOFMEMORY      32592
+#define IDS_PRNOUTOFDISK        32593
+#define IDS_PRNCANCEL           32594
+#define IDS_PRNMGRABORT         32595
+#define IDS_PRNGENERROR         32596
+#define IDS_PRNERRORCAPTION     32597
+
+#define ID_TITLE                101
+#define ID_DEVICE               102
+#define ID_PAGE			104
+
+// 'Connect to test'-sidan
+#define IDD_GETTEST		1001
+#define IDC_HOST		101
+#define IDC_USER		102
+#define IDC_PORT		103
+
+// 'FTP to telnet'-sidan
+#define IDD_GETFTP		1002
+#define IDC_HOST		101
+#define IDC_USER		102
+
+// Transfer mode (extra to Explorer dialog)
+#define IDD_TRFMODE		1003
+#define IDC_TMBIN		101
+#define IDC_TMASC		102
+#define IDC_TMTENEX		103
+
+#define IDD_BULKSELECT		1004
+#define IDC_TMBIN		101
+#define IDC_TMASC		102
+#define IDC_TMTENEX		103
+#define IDC_BULKDEST		104
+#define IDC_BFOLD		105
+
+// TInputDialog DIALOG resource (include\owl\inputdia.rh)
+#define IDD_INPUTDIALOG         32514
+#define ID_PROMPT               4091
+#define ID_INPUT                4090
+
+#define IDS_VALPXPCONFORM       32520
+#define IDS_VALINVALIDCHAR      32521
+#define IDS_VALNOTINRANGE       32522
+#define IDS_VALNOTINLIST        32523
+

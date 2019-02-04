@@ -1,0 +1,535 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-01-06 at 18:36:48 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+BCC32I  = Bcc32i +BccW32.cfg 
+TLINK32 = TLink32
+ILINK32 = Ilink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_ddbkrbdlib =  -Tpd -aa -V4.0 -c
+ResLocalOptsAtW32_ddbkrbdlib = 
+BLocalOptsAtW32_ddbkrbdlib = 
+CompInheritOptsAt_ddbkrbdlib = -IC:\BC5\INCLUDE;.;..\..\INCLUDE;..\..\INCLUDE\WIN32 -D_RTLDLL;HAVE_CONFIG_H;BUILD_KRB_LIB
+LinkerInheritOptsAt_ddbkrbdlib = -x
+LinkerOptsAt_ddbkrbdlib = $(LinkerLocalOptsAtW32_ddbkrbdlib)
+ResOptsAt_ddbkrbdlib = $(ResLocalOptsAtW32_ddbkrbdlib)
+BOptsAt_ddbkrbdlib = $(BLocalOptsAtW32_ddbkrbdlib)
+
+#
+# Dependency List
+#
+Dep_Krb = \
+   krb.lib
+
+all:	Krb
+	copy krb.lib ..
+	copy krb.dll ..\..\wbin\krb.dll
+
+!include "..\..\common.mak"
+ 
+Krb : BccW32.cfg $(Dep_Krb)
+  echo MakeNode
+
+krb.lib : krb.dll
+  $(IMPLIB) $@ krb.dll
+
+
+Dep_ddbkrbddll = \
+   ..\roken.lib\
+   ..\des.lib\
+   OBJS\extra.obj\
+   OBJS\verify_user.obj\
+   OBJS\util.obj\
+   OBJS\unparse_name.obj\
+   OBJS\tkt_string.obj\
+   OBJS\time.obj\
+   OBJS\ticket_memory.obj\
+   OBJS\str2key.obj\
+   OBJS\stime.obj\
+   OBJS\sendauth.obj\
+   OBJS\send_to_kdc.obj\
+   OBJS\save_credentials.obj\
+   OBJS\rw.obj\
+   OBJS\recvauth.obj\
+   OBJS\realm_parse.obj\
+   OBJS\read_service_key.obj\
+   OBJS\rd_safe.obj\
+   OBJS\rd_req.obj\
+   OBJS\rd_priv.obj\
+   OBJS\rd_err.obj\
+   OBJS\parse_name.obj\
+   OBJS\one.obj\
+   OBJS\name2name.obj\
+   OBJS\month_sname.obj\
+   OBJS\mk_safe.obj\
+   OBJS\mk_req.obj\
+   OBJS\mk_priv.obj\
+   OBJS\mk_err.obj\
+   OBJS\mk_auth.obj\
+   OBJS\lsb_addr_comp.obj\
+   OBJS\logging.obj\
+   OBJS\lifetime.obj\
+   OBJS\krb_get_in_tkt.obj\
+   OBJS\krb_err_txt.obj\
+   OBJS\krb_equiv.obj\
+   OBJS\krb_check_auth.obj\
+   OBJS\kntoln.obj\
+   OBJS\kdc_reply.obj\
+   OBJS\k_localtime.obj\
+   OBJS\k_getsockinst.obj\
+   OBJS\k_getport.obj\
+   OBJS\k_gethostname.obj\
+   OBJS\getst.obj\
+   OBJS\getrealm.obj\
+   OBJS\getfile.obj\
+   OBJS\getaddrs.obj\
+   OBJS\get_tf_realm.obj\
+   OBJS\get_tf_fullname.obj\
+   OBJS\get_svc_in_tkt.obj\
+   OBJS\get_krbrlm.obj\
+   OBJS\get_in_tkt.obj\
+   OBJS\get_host.obj\
+   OBJS\get_default_principal.obj\
+   OBJS\get_cred.obj\
+   OBJS\get_ad_tkt.obj\
+   OBJS\encrypt_ktext.obj\
+   OBJS\dllmain.obj\
+   OBJS\decomp_ticket.obj\
+   OBJS\debug_decl.obj\
+   OBJS\create_ticket.obj\
+   OBJS\create_ciph.obj\
+   OBJS\create_auth_reply.obj\
+   OBJS\cr_err_reply.obj\
+   OBJS\krb.res
+
+krb.dll : $(Dep_ddbkrbddll)
+  $(ILINK32) @&&|
+ /v- $(IDE_LinkFLAGS32) $(LinkerOptsAt_ddbkrbdlib) $(LinkerInheritOptsAt_ddbkrbdlib) +
+C:\BC5\LIB\c0d32.obj+
+OBJS\extra.obj+
+OBJS\verify_user.obj+
+OBJS\util.obj+
+OBJS\unparse_name.obj+
+OBJS\tkt_string.obj+
+OBJS\time.obj+
+OBJS\ticket_memory.obj+
+OBJS\str2key.obj+
+OBJS\stime.obj+
+OBJS\sendauth.obj+
+OBJS\send_to_kdc.obj+
+OBJS\save_credentials.obj+
+OBJS\rw.obj+
+OBJS\recvauth.obj+
+OBJS\realm_parse.obj+
+OBJS\read_service_key.obj+
+OBJS\rd_safe.obj+
+OBJS\rd_req.obj+
+OBJS\rd_priv.obj+
+OBJS\rd_err.obj+
+OBJS\parse_name.obj+
+OBJS\one.obj+
+OBJS\name2name.obj+
+OBJS\month_sname.obj+
+OBJS\mk_safe.obj+
+OBJS\mk_req.obj+
+OBJS\mk_priv.obj+
+OBJS\mk_err.obj+
+OBJS\mk_auth.obj+
+OBJS\lsb_addr_comp.obj+
+OBJS\logging.obj+
+OBJS\lifetime.obj+
+OBJS\krb_get_in_tkt.obj+
+OBJS\krb_err_txt.obj+
+OBJS\krb_equiv.obj+
+OBJS\krb_check_auth.obj+
+OBJS\kntoln.obj+
+OBJS\kdc_reply.obj+
+OBJS\k_localtime.obj+
+OBJS\k_getsockinst.obj+
+OBJS\k_getport.obj+
+OBJS\k_gethostname.obj+
+OBJS\getst.obj+
+OBJS\getrealm.obj+
+OBJS\getfile.obj+
+OBJS\getaddrs.obj+
+OBJS\get_tf_realm.obj+
+OBJS\get_tf_fullname.obj+
+OBJS\get_svc_in_tkt.obj+
+OBJS\get_krbrlm.obj+
+OBJS\get_in_tkt.obj+
+OBJS\get_host.obj+
+OBJS\get_default_principal.obj+
+OBJS\get_cred.obj+
+OBJS\get_ad_tkt.obj+
+OBJS\encrypt_ktext.obj+
+OBJS\dllmain.obj+
+OBJS\decomp_ticket.obj+
+OBJS\debug_decl.obj+
+OBJS\create_ticket.obj+
+OBJS\create_ciph.obj+
+OBJS\create_auth_reply.obj+
+OBJS\cr_err_reply.obj
+$<,$*
+..\roken.lib+
+..\des.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+OBJS\krb.res
+
+|
+OBJS\extra.obj :  extra.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ extra.c
+|
+
+OBJS\verify_user.obj :  verify_user.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ verify_user.c
+|
+
+OBJS\util.obj :  util.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ util.c
+|
+
+OBJS\unparse_name.obj :  unparse_name.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ unparse_name.c
+|
+
+OBJS\tkt_string.obj :  tkt_string.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ tkt_string.c
+|
+
+OBJS\time.obj :  time.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ time.c
+|
+
+OBJS\ticket_memory.obj :  ticket_memory.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ ticket_memory.c
+|
+
+OBJS\str2key.obj :  str2key.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ str2key.c
+|
+
+OBJS\stime.obj :  stime.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ stime.c
+|
+
+OBJS\sendauth.obj :  sendauth.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ sendauth.c
+|
+
+OBJS\send_to_kdc.obj :  send_to_kdc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ send_to_kdc.c
+|
+
+OBJS\save_credentials.obj :  save_credentials.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ save_credentials.c
+|
+
+OBJS\rw.obj :  rw.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ rw.c
+|
+
+OBJS\recvauth.obj :  recvauth.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ recvauth.c
+|
+
+OBJS\realm_parse.obj :  realm_parse.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ realm_parse.c
+|
+
+OBJS\read_service_key.obj :  read_service_key.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ read_service_key.c
+|
+
+OBJS\rd_safe.obj :  rd_safe.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ rd_safe.c
+|
+
+OBJS\rd_req.obj :  rd_req.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ rd_req.c
+|
+
+OBJS\rd_priv.obj :  rd_priv.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ rd_priv.c
+|
+
+OBJS\rd_err.obj :  rd_err.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ rd_err.c
+|
+
+OBJS\parse_name.obj :  parse_name.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ parse_name.c
+|
+
+OBJS\one.obj :  one.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ one.c
+|
+
+OBJS\name2name.obj :  name2name.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ name2name.c
+|
+
+OBJS\month_sname.obj :  month_sname.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ month_sname.c
+|
+
+OBJS\mk_safe.obj :  mk_safe.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ mk_safe.c
+|
+
+OBJS\mk_req.obj :  mk_req.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ mk_req.c
+|
+
+OBJS\mk_priv.obj :  mk_priv.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ mk_priv.c
+|
+
+OBJS\mk_err.obj :  mk_err.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ mk_err.c
+|
+
+OBJS\mk_auth.obj :  mk_auth.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ mk_auth.c
+|
+
+OBJS\lsb_addr_comp.obj :  lsb_addr_comp.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ lsb_addr_comp.c
+|
+
+OBJS\logging.obj :  logging.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ logging.c
+|
+
+OBJS\lifetime.obj :  lifetime.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ lifetime.c
+|
+
+OBJS\krb_get_in_tkt.obj :  krb_get_in_tkt.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ krb_get_in_tkt.c
+|
+
+OBJS\krb_err_txt.obj :  krb_err_txt.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ krb_err_txt.c
+|
+
+OBJS\krb_equiv.obj :  krb_equiv.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ krb_equiv.c
+|
+
+OBJS\krb_check_auth.obj :  krb_check_auth.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ krb_check_auth.c
+|
+
+OBJS\kntoln.obj :  kntoln.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ kntoln.c
+|
+
+OBJS\kdc_reply.obj :  kdc_reply.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ kdc_reply.c
+|
+
+OBJS\k_localtime.obj :  k_localtime.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ k_localtime.c
+|
+
+OBJS\k_getsockinst.obj :  k_getsockinst.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ k_getsockinst.c
+|
+
+OBJS\k_getport.obj :  k_getport.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ k_getport.c
+|
+
+OBJS\k_gethostname.obj :  k_gethostname.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ k_gethostname.c
+|
+
+OBJS\getst.obj :  getst.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ getst.c
+|
+
+OBJS\getrealm.obj :  getrealm.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ getrealm.c
+|
+
+OBJS\getfile.obj :  getfile.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ getfile.c
+|
+
+OBJS\getaddrs.obj :  getaddrs.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ getaddrs.c
+|
+
+OBJS\get_tf_realm.obj :  get_tf_realm.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_tf_realm.c
+|
+
+OBJS\get_tf_fullname.obj :  get_tf_fullname.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_tf_fullname.c
+|
+
+OBJS\get_svc_in_tkt.obj :  get_svc_in_tkt.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_svc_in_tkt.c
+|
+
+OBJS\get_krbrlm.obj :  get_krbrlm.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_krbrlm.c
+|
+
+OBJS\get_in_tkt.obj :  get_in_tkt.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_in_tkt.c
+|
+
+OBJS\get_host.obj :  get_host.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_host.c
+|
+
+OBJS\get_default_principal.obj :  get_default_principal.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_default_principal.c
+|
+
+OBJS\get_cred.obj :  get_cred.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_cred.c
+|
+
+OBJS\get_ad_tkt.obj :  get_ad_tkt.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ get_ad_tkt.c
+|
+
+OBJS\encrypt_ktext.obj :  encrypt_ktext.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ encrypt_ktext.c
+|
+
+OBJS\dllmain.obj :  dllmain.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ dllmain.c
+|
+
+OBJS\decomp_ticket.obj :  decomp_ticket.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ decomp_ticket.c
+|
+
+OBJS\debug_decl.obj :  debug_decl.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ debug_decl.c
+|
+
+OBJS\create_ticket.obj :  create_ticket.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ create_ticket.c
+|
+
+OBJS\create_ciph.obj :  create_ciph.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ create_ciph.c
+|
+
+OBJS\create_auth_reply.obj :  create_auth_reply.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ create_auth_reply.c
+|
+
+OBJS\cr_err_reply.obj :  cr_err_reply.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib) -o$@ cr_err_reply.c
+|
+
+OBJS\krb.res :  krb.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ddbkrbdlib) $(CompInheritOptsAt_ddbkrbdlib)  -FO$@ krb.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.b52
+   Copy &&|
+-w
+-R
+-v-
+-WM-
+-vi
+-H
+-H=krb.csm
+-WM
+-WD
+-H-
+| $@
+
+

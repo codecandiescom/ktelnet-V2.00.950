@@ -1,0 +1,139 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-12-05 at 19:37:02 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+BCC32I  = Bcc32i +BccW32.cfg 
+TLINK32 = TLink32
+ILINK32 = Ilink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_kftpdexe =  -Tpe -aa -V4.0 -c -v-
+ResLocalOptsAtW32_kftpdexe = 
+BLocalOptsAtW32_kftpdexe = 
+CompInheritOptsAt_kftpdexe = -IC:\BC5\INCLUDE;..\..\INCLUDE\WIN32;..\..\INCLUDE -DINC_OLE2;_RTLDLL;_BIDSDLL;_OWLDLL;STRICT;_OWLPCH;HAVE_CONFIG_H
+LinkerInheritOptsAt_kftpdexe = -x
+LinkerOptsAt_kftpdexe = $(LinkerLocalOptsAtW32_kftpdexe)
+ResOptsAt_kftpdexe = $(ResLocalOptsAtW32_kftpdexe)
+BOptsAt_kftpdexe = $(BLocalOptsAtW32_kftpdexe)
+
+#
+# Dependency List
+#
+Dep_kftp = \
+   kftp.exe
+
+all: kftp
+	copy Kftp.exe ..\..\wbin\KFtp.exe
+
+!include "..\..\common.mak"
+
+kftp : BccW32.cfg $(Dep_kftp)
+  echo MakeNode
+
+Dep_kftpdexe = \
+   ..\..\wbin\ktcommon.lib\
+   ..\..\lib\roken.lib\
+   ..\..\lib\des.lib\
+   ..\..\lib\krb.lib\
+   ..\..\lib\wxrtl.lib\
+   OBJS\ftphnd.obj\
+   OBJS\newconn.obj\
+   OBJS\lfilter.obj\
+   OBJS\fclient.obj\
+   OBJS\fterm.obj\
+   OBJS\main.obj\
+   OBJS\kftp.res
+
+kftp.exe : $(Dep_kftpdexe)
+  $(ILINK32) @&&|
+ $(IDE_LinkFLAGS32) $(LinkerOptsAt_kftpdexe) $(LinkerInheritOptsAt_kftpdexe) +
+C:\BC5\LIB\c0w32.obj+
+OBJS\ftphnd.obj+
+OBJS\newconn.obj+
+OBJS\lfilter.obj+
+OBJS\fclient.obj+
+OBJS\fterm.obj+
+OBJS\main.obj
+$<,$*
+..\..\wbin\ktcommon.lib+
+..\..\lib\roken.lib+
+..\..\lib\des.lib+
+..\..\lib\krb.lib+
+..\..\lib\wxrtl.lib+
+C:\BC5\LIB\owlwti.lib+
+C:\BC5\LIB\bidsti.lib+
+C:\BC5\LIB\ole2w32.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+OBJS\kftp.res
+
+|
+OBJS\ftphnd.obj :  ftphnd.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kftpdexe) $(CompInheritOptsAt_kftpdexe) -o$@ ftphnd.cpp
+|
+
+OBJS\newconn.obj :  newconn.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kftpdexe) $(CompInheritOptsAt_kftpdexe) -o$@ newconn.cpp
+|
+
+OBJS\lfilter.obj :  lfilter.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kftpdexe) $(CompInheritOptsAt_kftpdexe) -o$@ lfilter.cpp
+|
+
+OBJS\fclient.obj :  fclient.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kftpdexe) $(CompInheritOptsAt_kftpdexe) -o$@ fclient.cpp
+|
+
+OBJS\fterm.obj :  fterm.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kftpdexe) $(CompInheritOptsAt_kftpdexe) -o$@ fterm.cpp
+|
+
+OBJS\main.obj :  main.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kftpdexe) $(CompInheritOptsAt_kftpdexe) -o$@ main.cpp
+|
+
+OBJS\kftp.res :  kftp.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_kftpdexe) $(CompInheritOptsAt_kftpdexe)  -FO$@ kftp.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.b52
+   Copy &&|
+-w
+-R
+-v-
+-vi
+-H
+-H=OBJS\KFTP.CSM
+-WM
+-W
+-y-
+| $@
+
+

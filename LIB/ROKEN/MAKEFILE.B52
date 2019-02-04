@@ -1,0 +1,188 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-01-06 at 18:35:45 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+BCC32I  = Bcc32i +BccW32.cfg 
+TLINK32 = TLink32
+ILINK32 = Ilink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_ddbrokendlib =  -Tpd -aa -V4.0 -c
+ResLocalOptsAtW32_ddbrokendlib = 
+BLocalOptsAtW32_ddbrokendlib = 
+CompInheritOptsAt_ddbrokendlib = -IC:\BC5\INCLUDE;..\..\INCLUDE\WIN32;..\..\INCLUDE -D_RTLDLL;HAVE_CONFIG_H;BUILD_ROKEN_LIB
+LinkerInheritOptsAt_ddbrokendlib = -x
+LinkerOptsAt_ddbrokendlib = $(LinkerLocalOptsAtW32_ddbrokendlib)
+ResOptsAt_ddbrokendlib = $(ResLocalOptsAtW32_ddbrokendlib)
+BOptsAt_ddbrokendlib = $(BLocalOptsAtW32_ddbrokendlib)
+
+#
+# Dependency List
+#
+Dep_Roken = \
+   roken.lib
+
+all:	Roken
+	copy roken.lib ..
+	copy roken.dll ..\..\wbin\roken.dll
+
+!include "..\..\common.mak"
+ 
+Roken : BccW32.cfg $(Dep_Roken)
+  echo MakeNode
+
+roken.lib : roken.dll
+  $(IMPLIB) $@ roken.dll
+
+
+Dep_ddbrokenddll = \
+   OBJS\dllmain.obj\
+   OBJS\net_write.obj\
+   OBJS\net_read.obj\
+   OBJS\strcat_truncate.obj\
+   OBJS\strcpy_truncate.obj\
+   OBJS\strtok_r.obj\
+   OBJS\strcasecmp.obj\
+   OBJS\snprintf.obj\
+   OBJS\resolve.obj\
+   OBJS\getuid.obj\
+   OBJS\gettimeofday.obj\
+   OBJS\concat.obj\
+   OBJS\base64.obj\
+   OBJS\time_r.obj\
+   OBJS\roken.res
+
+roken.dll : $(Dep_ddbrokenddll)
+  $(ILINK32) @&&|
+ /v $(IDE_LinkFLAGS32) $(LinkerOptsAt_ddbrokendlib) $(LinkerInheritOptsAt_ddbrokendlib) +
+C:\BC5\LIB\c0d32.obj+
+OBJS\dllmain.obj+
+OBJS\net_write.obj+
+OBJS\net_read.obj+
+OBJS\strcat_truncate.obj+
+OBJS\strcpy_truncate.obj+
+OBJS\strtok_r.obj+
+OBJS\strcasecmp.obj+
+OBJS\snprintf.obj+
+OBJS\resolve.obj+
+OBJS\getuid.obj+
+OBJS\gettimeofday.obj+
+OBJS\concat.obj+
+OBJS\base64.obj+
+OBJS\time_r.obj
+$<,$*
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+OBJS\roken.res
+
+|
+OBJS\dllmain.obj :  dllmain.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ dllmain.c
+|
+
+OBJS\net_write.obj :  net_write.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ net_write.c
+|
+
+OBJS\net_read.obj :  net_read.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ net_read.c
+|
+
+OBJS\strcat_truncate.obj :  strcat_truncate.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ strcat_truncate.c
+|
+
+OBJS\strcpy_truncate.obj :  strcpy_truncate.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ strcpy_truncate.c
+|
+
+OBJS\strtok_r.obj :  strtok_r.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ strtok_r.c
+|
+
+OBJS\strcasecmp.obj :  strcasecmp.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ strcasecmp.c
+|
+
+OBJS\snprintf.obj :  snprintf.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ snprintf.c
+|
+
+OBJS\resolve.obj :  resolve.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ resolve.c
+|
+
+OBJS\getuid.obj :  getuid.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ getuid.c
+|
+
+OBJS\gettimeofday.obj :  gettimeofday.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ gettimeofday.c
+|
+
+OBJS\concat.obj :  concat.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ concat.c
+|
+
+OBJS\base64.obj :  base64.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ base64.c
+|
+
+OBJS\time_r.obj :  time_r.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib) -o$@ time_r.c
+|
+
+OBJS\roken.res :  roken.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ddbrokendlib) $(CompInheritOptsAt_ddbrokendlib)  -FO$@ roken.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.b52
+   Copy &&|
+-w
+-R
+-v-
+-vi
+-H
+-H=roken.csm
+-H-
+-p-
+-WD
+-WM
+| $@
+
+

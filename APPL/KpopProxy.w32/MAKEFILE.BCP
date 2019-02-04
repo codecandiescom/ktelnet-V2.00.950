@@ -1,0 +1,114 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-05-16 at 19:23:46 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+TLINK32 = TLink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_kpopproxydexe =  -Tpe -aa -V4.0 -c -v-
+ResLocalOptsAtW32_kpopproxydexe = 
+BLocalOptsAtW32_kpopproxydexe = 
+CompInheritOptsAt_kpopproxydexe = -IC:\BC5\INCLUDE;..\..\INCLUDE\WIN32;..\..\INCLUDE -D_RTLDLL;_BIDSDLL;_OWLDLL;STRICT;_OWLPCH;HAVE_CONFIG_H
+LinkerInheritOptsAt_kpopproxydexe = -x
+LinkerOptsAt_kpopproxydexe = $(LinkerLocalOptsAtW32_kpopproxydexe)
+ResOptsAt_kpopproxydexe = $(ResLocalOptsAtW32_kpopproxydexe)
+BOptsAt_kpopproxydexe = $(BLocalOptsAtW32_kpopproxydexe)
+
+#
+# Dependency List
+#
+Dep_PopProxy = \
+   kpopproxy.exe
+
+all: kpopproxy
+	copy kpopproxy.exe ..\..\wbin\KPopProxy.exe
+
+!include "..\..\common.mak"
+ 
+kpopproxy : BccW32.cfg $(Dep_PopProxy)
+  echo MakeNode
+
+Dep_kpopproxydexe = \
+   ..\..\wbin\ktcommon.lib\
+   ..\..\lib\roken.lib\
+   ..\..\lib\des.lib\
+   ..\..\lib\krb.lib\
+   ..\..\lib\wxrtl.lib\
+   OBJS\popproxy.obj\
+   OBJS\mwindow.obj\
+   OBJS\main.obj\
+   OBJS\popproxy.res
+
+kpopproxy.exe : $(Dep_kpopproxydexe)
+  $(TLINK32) @&&|
+ $(IDE_LinkFLAGS32) $(LinkerOptsAt_kpopproxydexe) $(LinkerInheritOptsAt_kpopproxydexe) +
+C:\BC5\LIB\c0w32.obj+
+OBJS\popproxy.obj+
+OBJS\mwindow.obj+
+OBJS\main.obj
+$<,$*
+..\..\wbin\ktcommon.lib+
+..\..\lib\roken.lib+
+..\..\lib\des.lib+
+..\..\lib\krb.lib+
+..\..\lib\wxrtl.lib+
+C:\BC5\LIB\owlwti.lib+
+C:\BC5\LIB\bidsti.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+|
+   $(BRC32) OBJS\popproxy.res $<
+
+OBJS\popproxy.obj :  popproxy.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kpopproxydexe) $(CompInheritOptsAt_kpopproxydexe) -o$@ popproxy.cpp
+|
+
+OBJS\mwindow.obj :  mwindow.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kpopproxydexe) $(CompInheritOptsAt_kpopproxydexe) -o$@ mwindow.cpp
+|
+
+OBJS\main.obj :  main.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_kpopproxydexe) $(CompInheritOptsAt_kpopproxydexe) -o$@ main.cpp
+|
+
+OBJS\popproxy.res :  popproxy.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_kpopproxydexe) $(CompInheritOptsAt_kpopproxydexe)  -FO$@ popproxy.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.bcp
+   Copy &&|
+-w
+-R
+-v-
+-vi
+-H
+-H=OBJS\KFTP.CSM
+-WM
+-W
+-y-
+| $@
+

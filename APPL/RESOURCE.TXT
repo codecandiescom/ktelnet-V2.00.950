@@ -1,0 +1,65 @@
+STRINGS/COMMAND-CODES (IDS_, CM_, IDSR_, IDG_)
+	APPLICATION
+		KTELNET
+			Misc.	100
+			Tickets	1200
+			FtpMach	3000
+			Main	5000
+			Emul	6000
+			Telnet	6100
+			Keymap	7000
+			Print	9000
+		KFTP
+			Misc	100
+			Main	5000
+		POPPROXY
+			Misc	100
+			Main	5000
+
+	KTCOMMON		10000
+			Setup	10000
+			Setup	10100
+			Misc.	10200
+			KTFTP	10300
+
+	WXRTL
+			Wxrtl	8000
+			Parse	11000
+
+MENUS	(IDM_)
+	APPLICATION
+			Misc.	100
+			Tickets	1200
+
+	KTCOMMON		10000
+			Setup	10000
+			Misc.	10200
+	WXRTL
+			Wxrtl	8000
+
+DIALOGS (IDD_)
+	APPLICATION
+		KTelnet
+			Misc.	1000
+			Tickets	1200
+		KFTP
+			Misc.	1000
+
+	KTCOMMON		10000
+			Setup	10000
+			Misc.	10200
+
+	WXRTL
+			Wxrtl	8000
+
+ICON (IDI_)
+	APPLICATION
+		KTELNET
+			Misc.	1000
+		KFTP
+			Misc.	1000
+
+
+BITMAPS
+	APPLICATION
+			Misc.	100

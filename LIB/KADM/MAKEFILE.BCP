@@ -1,0 +1,140 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1998-11-08 at 17:38:34 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+TLINK32 = TLink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_ddbkadmdlib =  -Tpd -aa -V4.0 -c
+ResLocalOptsAtW32_ddbkadmdlib = 
+BLocalOptsAtW32_ddbkadmdlib = 
+CompInheritOptsAt_ddbkadmdlib = -IC:\BC5\INCLUDE;..\..\INCLUDE;..\..\INCLUDE\WIN32 -D_RTLDLL;HAVE_CONFIG_H;BUILD_KADM_LIB
+LinkerInheritOptsAt_ddbkadmdlib = -x
+LinkerOptsAt_ddbkadmdlib = $(LinkerLocalOptsAtW32_ddbkadmdlib)
+ResOptsAt_ddbkadmdlib = $(ResLocalOptsAtW32_ddbkadmdlib)
+BOptsAt_ddbkadmdlib = $(BLocalOptsAtW32_ddbkadmdlib)
+
+#
+# Dependency List
+#
+Dep_kadm = \
+   kadm_err.rh kadm_err.rc kadm.lib 
+
+all:	kadm
+	copy kadm.lib ..
+	copy kadm.dll ..\..\wbin\kadm.dll
+
+#kadm_locl.h: kadm_err.h
+#kadm.rc: kadm_err.rc
+
+!include "..\..\common.mak"
+
+kadm_err.rh: kadm_err.et ..\..\wbin\etcomp.exe
+	..\..\wbin\etcomp $*
+	copy kadm_err.rh ..\..\include\win32\kadm_err.rh
+
+kadm : BccW32.cfg $(Dep_kadm)
+  echo MakeNode
+
+kadm.lib : kadm.dll
+  $(IMPLIB) $@ kadm.dll
+
+
+Dep_ddbkadmddll = \
+   ..\des.lib\
+   ..\krb.lib\
+   ..\roken.lib\
+   OBJS\kadm_supp.obj\
+   OBJS\kadm_stream.obj\
+   OBJS\kadm_cli_wrap.obj\
+   OBJS\check_password.obj\
+   OBJS\dllmain.obj\
+   OBJS\kadm.res
+
+kadm.dll : $(Dep_ddbkadmddll)
+  $(TLINK32) @&&|
+ /v- $(IDE_LinkFLAGS32) $(LinkerOptsAt_ddbkadmdlib) $(LinkerInheritOptsAt_ddbkadmdlib) +
+C:\BC5\LIB\c0d32.obj+
+OBJS\kadm_supp.obj+
+OBJS\kadm_stream.obj+
+OBJS\kadm_cli_wrap.obj+
+OBJS\check_password.obj+
+OBJS\dllmain.obj
+$<,$*
+..\des.lib+
+..\krb.lib+
+..\roken.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+|
+   $(BRC32) OBJS\kadm.res $<
+
+OBJS\kadm_supp.obj :  kadm_supp.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkadmdlib) $(CompInheritOptsAt_ddbkadmdlib) -o$@ kadm_supp.c
+|
+
+OBJS\kadm_stream.obj :  kadm_stream.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkadmdlib) $(CompInheritOptsAt_ddbkadmdlib) -o$@ kadm_stream.c
+|
+
+OBJS\kadm_cli_wrap.obj :  kadm_cli_wrap.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkadmdlib) $(CompInheritOptsAt_ddbkadmdlib) -o$@ kadm_cli_wrap.c
+|
+
+OBJS\check_password.obj :  check_password.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkadmdlib) $(CompInheritOptsAt_ddbkadmdlib) -o$@ check_password.c
+|
+
+OBJS\dllmain.obj :  dllmain.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbkadmdlib) $(CompInheritOptsAt_ddbkadmdlib) -o$@ dllmain.c
+|
+
+OBJS\kadm.res :  kadm.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ddbkadmdlib) $(CompInheritOptsAt_ddbkadmdlib)  -FO$@ kadm.rc
+|
+OBJS\kadm_err.res :  kadm_err.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ddbkadmdlib) $(CompInheritOptsAt_ddbkadmdlib)  -FO$@ kadm_err.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.bcp
+   Copy &&|
+-w
+-R
+-vi
+-H
+-H=OBJS\KADM.CSM
+-H"KADM_LOCL.H"
+-H-
+-WD
+-WM
+-v-
+| $@
+
+

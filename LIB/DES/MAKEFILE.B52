@@ -1,0 +1,283 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-01-06 at 18:36:15 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+BCC32I  = Bcc32i +BccW32.cfg 
+TLINK32 = TLink32
+ILINK32 = Ilink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_ddbdesdlib =  -LC:\BC5\LIB -Tpd -aa -V4.0 -c
+ResLocalOptsAtW32_ddbdesdlib = 
+BLocalOptsAtW32_ddbdesdlib = 
+CompInheritOptsAt_ddbdesdlib = -IC:\BC5\INCLUDE;.;..\..\INCLUDE\WIN32;..\..\INCLUDE -D_RTLDLL;HAVE_CONFIG_H;BUILD_DES_LIB
+LinkerInheritOptsAt_ddbdesdlib = -x
+LinkerOptsAt_ddbdesdlib = $(LinkerLocalOptsAtW32_ddbdesdlib)
+ResOptsAt_ddbdesdlib = $(ResLocalOptsAtW32_ddbdesdlib)
+BOptsAt_ddbdesdlib = $(BLocalOptsAtW32_ddbdesdlib)
+
+#
+# Dependency List
+#
+Dep_Des = \
+   des.lib
+
+all:	Des
+	copy des.lib ..
+	copy des.dll ..\..\wbin\des.dll
+
+!include "..\..\common.mak"
+ 
+Des : BccW32.cfg $(Dep_Des)
+  echo MakeNode
+
+des.lib : des.dll
+  $(IMPLIB) $@ des.dll
+
+
+Dep_ddbdesddll = \
+   ..\roken.lib\
+   OBJS\cbc_cksm.obj\
+   OBJS\cbc_enc.obj\
+   OBJS\cbc3_enc.obj\
+   OBJS\cfb_enc.obj\
+   OBJS\cfb64ede.obj\
+   OBJS\cfb64enc.obj\
+   OBJS\des_enc.obj\
+   OBJS\dllmain.obj\
+   OBJS\ecb_enc.obj\
+   OBJS\ecb3_enc.obj\
+   OBJS\ede_enc.obj\
+   OBJS\enc_read.obj\
+   OBJS\enc_writ.obj\
+   OBJS\fcrypt.obj\
+   OBJS\key_par.obj\
+   OBJS\ncbc_enc.obj\
+   OBJS\ofb_enc.obj\
+   OBJS\ofb64ede.obj\
+   OBJS\ofb64enc.obj\
+   OBJS\pcbc_enc.obj\
+   OBJS\qud_cksm.obj\
+   OBJS\read_pwd.obj\
+   OBJS\rnd_keys.obj\
+   OBJS\rpc_enc.obj\
+   OBJS\set_key.obj\
+   OBJS\str2key.obj\
+   OBJS\supp.obj\
+   OBJS\des.res
+
+des.dll : $(Dep_ddbdesddll)
+  $(ILINK32) @&&|
+ /v- $(IDE_LinkFLAGS32) $(LinkerOptsAt_ddbdesdlib) $(LinkerInheritOptsAt_ddbdesdlib) +
+C:\BC5\LIB\c0d32.obj+
+OBJS\cbc_cksm.obj+
+OBJS\cbc_enc.obj+
+OBJS\cbc3_enc.obj+
+OBJS\cfb_enc.obj+
+OBJS\cfb64ede.obj+
+OBJS\cfb64enc.obj+
+OBJS\des_enc.obj+
+OBJS\dllmain.obj+
+OBJS\ecb_enc.obj+
+OBJS\ecb3_enc.obj+
+OBJS\ede_enc.obj+
+OBJS\enc_read.obj+
+OBJS\enc_writ.obj+
+OBJS\fcrypt.obj+
+OBJS\key_par.obj+
+OBJS\ncbc_enc.obj+
+OBJS\ofb_enc.obj+
+OBJS\ofb64ede.obj+
+OBJS\ofb64enc.obj+
+OBJS\pcbc_enc.obj+
+OBJS\qud_cksm.obj+
+OBJS\read_pwd.obj+
+OBJS\rnd_keys.obj+
+OBJS\rpc_enc.obj+
+OBJS\set_key.obj+
+OBJS\str2key.obj+
+OBJS\supp.obj
+$<,$*
+..\roken.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+OBJS\des.res
+
+|
+OBJS\cbc_cksm.obj :  cbc_cksm.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ cbc_cksm.c
+|
+
+OBJS\cbc_enc.obj :  cbc_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ cbc_enc.c
+|
+
+OBJS\cbc3_enc.obj :  cbc3_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ cbc3_enc.c
+|
+
+OBJS\cfb_enc.obj :  cfb_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ cfb_enc.c
+|
+
+OBJS\cfb64ede.obj :  cfb64ede.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ cfb64ede.c
+|
+
+OBJS\cfb64enc.obj :  cfb64enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ cfb64enc.c
+|
+
+OBJS\des_enc.obj :  des_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ des_enc.c
+|
+
+OBJS\dllmain.obj :  dllmain.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ dllmain.c
+|
+
+OBJS\ecb_enc.obj :  ecb_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ ecb_enc.c
+|
+
+OBJS\ecb3_enc.obj :  ecb3_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ ecb3_enc.c
+|
+
+OBJS\ede_enc.obj :  ede_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ ede_enc.c
+|
+
+OBJS\enc_read.obj :  enc_read.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ enc_read.c
+|
+
+OBJS\enc_writ.obj :  enc_writ.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ enc_writ.c
+|
+
+OBJS\fcrypt.obj :  fcrypt.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ fcrypt.c
+|
+
+OBJS\key_par.obj :  key_par.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ key_par.c
+|
+
+OBJS\ncbc_enc.obj :  ncbc_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ ncbc_enc.c
+|
+
+OBJS\ofb_enc.obj :  ofb_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ ofb_enc.c
+|
+
+OBJS\ofb64ede.obj :  ofb64ede.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ ofb64ede.c
+|
+
+OBJS\ofb64enc.obj :  ofb64enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ ofb64enc.c
+|
+
+OBJS\pcbc_enc.obj :  pcbc_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ pcbc_enc.c
+|
+
+OBJS\qud_cksm.obj :  qud_cksm.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ qud_cksm.c
+|
+
+OBJS\read_pwd.obj :  read_pwd.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ read_pwd.c
+|
+
+OBJS\rnd_keys.obj :  rnd_keys.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ rnd_keys.c
+|
+
+OBJS\rpc_enc.obj :  rpc_enc.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ rpc_enc.c
+|
+
+OBJS\set_key.obj :  set_key.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ set_key.c
+|
+
+OBJS\str2key.obj :  str2key.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ str2key.c
+|
+
+OBJS\supp.obj :  supp.c
+  $(BCC32) -P- -c @&&|
+ $(CompOptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib) -o$@ supp.c
+|
+
+OBJS\des.res :  des.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ddbdesdlib) $(CompInheritOptsAt_ddbdesdlib)  -FO$@ des.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.b52
+   Copy &&|
+-w
+-R
+-v-
+-WM-
+-vi
+-H
+-H=des.csm
+-w-aus
+-w-par
+-WM
+-WD
+-H-
+| $@
+
+

@@ -1,0 +1,8 @@
+/*
+ * Adapted for Windows 95/98/NT and Borland C++ 5.0
+ * by Thomas Nyström, Stacken Computer Club
+ * 1998-12-30 20:47:46
+ */	 
+
+#define IDS_PREF_KADM	0xe000
+#define IDS_PREF_KERR	0xe100

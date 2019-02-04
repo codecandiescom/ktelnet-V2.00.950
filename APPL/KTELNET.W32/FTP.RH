@@ -1,0 +1,86 @@
+/*
+ * Copyright (c) 1998 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#define IDI_FTP		1002
+
+#define IDS_FMCEC	3000
+#define IDS_FMUTL	3001
+#define IDS_FTPPROMPT	3002
+#define IDS_FMABORT	3003
+#define IDS_FMUTWLF	3004
+#define IDS_FMCWDNR	3005
+#define	IDS_FMPWDNR	3006
+#define IDS_FMGFPNE	3007
+#define	IDS_FMDIROF	3008
+#define IDS_FMFAILED	3009
+#define IDS_FMTOTBIG	3010
+#define IDS_FMTOTSIZ	3011
+#define	IDS_FMCCLD	3012
+#define	IDS_FMCGLD	3013
+#define IDS_HLPGET	3014
+#define IDS_HLPPUT	3015
+#define IDS_HLPDIR	3016
+#define IDS_PASSIVEON	3017
+#define IDS_PASSIVEOFF	3018
+#define IDS_PSMISS	3019
+#define IDS_HASHON	3020
+#define	IDS_HASHOFF	3021
+#define IDS_TRFBIN	3022
+#define IDS_TRFASC	3023
+#define IDS_TRFT20	3024
+#define IDS_ARGIGN	3025
+#define IDS_HLPKAUTH	3026
+#define IDS_KAFAIL	3027
+#define IDS_KLFAIL	3028
+#define IDS_KDFAIL	3029
+#define IDS_HLPMPUT	3030
+#define	IDS_HLPMGET	3031
+#define	IDS_PROMPTON	3032
+#define	IDS_PROMPTOFF	3033
+#define IDS_TRFFP	3034
+#define IDS_YESCHARS	3035
+#define IDS_HLPRM	3036
+#define IDS_HLPMKDIR	3037
+#define IDS_HLPRMDIR	3038
+#define IDS_HELP	3039
+#define IDS_FMTCMPLE	3040
+#define IDS_HLPAFSLOG	3041
+#define IDS_ALFAIL	3042
+#define IDS_HLPRENAME	3043
+
+#define	IDS_REOPEN		5025

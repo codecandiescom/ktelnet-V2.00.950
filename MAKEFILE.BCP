@@ -1,0 +1,120 @@
+#
+#	Makefile to generate the libraries for Kerberos4 with
+#	Borland C++ 5.0
+#	
+#	The makefiles assumes the Borland compilers and utilites are
+#	present in the current path. If they are not, then you have
+#	to edit the 'makefile.bcp'-files in the directories.
+#
+#	Simply type 'make -f makefile.bcp' to make the libraries
+#
+
+.swap
+
+all:	libs genlib appl
+	@echo all done!
+
+libs:
+	@echo ****************************************************************
+	@echo Build all kerberos libraries and suport-programs
+	@echo ****************************************************************
+	@echo.
+	@echo Making 'roken.dll'
+	cd lib\roken
+	make -f makefile.bcp
+	@echo Making 'wutil'
+	cd ..\..\wutil
+	make -f makefile.bcp
+	@echo Making 'des.dll'
+	cd ..\lib\des
+	make -f makefile.bcp
+	@echo Making 'krb.dll'
+	cd ..\krb
+	make -f makefile.bcp
+	@echo Making 'kadm.dll'
+	cd ..\kadm
+	make -f makefile.bcp
+	cd ..\..
+	@echo.
+	@echo ****************************************************************
+	@echo roken.dll, des.dll, krb.dll and kadm.dll has been built.
+	@echo ****************************************************************
+	@echo.
+
+genlib:
+	@echo ****************************************************************
+	@echo Build general library for application
+	@echo ****************************************************************
+	@echo.
+	@echo Making 'wxrtl.dll'
+	cd lib\wxrtl
+	make -f makefile.bcp
+	cd ..\..
+	@echo ****************************************************************
+	@echo wxrtl.dll has been built.
+	@echo ****************************************************************
+	@echo.
+
+appl:
+	@echo ****************************************************************
+	@echo Build common library for application
+	@echo ****************************************************************
+	@echo.
+	@echo Making 'ktcommon.dll'
+	cd appl\ktcommon.w32
+	make -f makefile.bcp
+	cd ..\..
+	@echo ****************************************************************
+	@echo ktcommon.dll has been built.
+	@echo ****************************************************************
+	@echo.
+	@echo ****************************************************************
+	@echo Build application programs
+	@echo ****************************************************************
+	@echo.
+	@echo Making 'KTelnet.exe'
+	cd appl\ktelnet.w32
+	make -f makefile.bcp
+	@echo Making 'KPopProxy.exe'
+	cd ..\KpopProxy.w32
+	make -f makefile.bcp
+	@echo Making 'Kftp.exe'
+	cd ..\Kftp.w32
+	make -f makefile.bcp
+	cd ..\..
+	@echo ****************************************************************
+	@echo Applications have been built.
+	@echo ****************************************************************
+	@echo.
+
+cleanall: clean
+	-del wbin\*.exe
+	-del wbin\*.lib
+	-del wbin\*.dll
+	-del wbin\*.map
+	-del wbin\*.il*
+	-del wbin\*.tds
+	-del lib\*.lib
+
+clean:
+	cd wutil
+	make -f makefile.bcp clean
+	cd ..\lib\roken
+	make -f makefile.bcp clean
+	cd ..\des
+	make -f makefile.bcp clean
+	cd ..\krb
+	make -f makefile.bcp clean
+	cd ..\kadm
+	make -f makefile.bcp clean
+	cd ..\wxrtl
+	make -f makefile.bcp clean
+	cd ..\..\appl\ktcommon.w32
+	make -f makefile.bcp clean
+	cd ..\ktelnet.w32
+	make -f makefile.bcp clean
+	cd ..\kpopproxy.w32
+	make -f makefile.bcp clean
+	cd ..\kftp.w32
+	make -f makefile.bcp clean
+	cd ..\..

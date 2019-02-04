@@ -1,0 +1,27 @@
+# Enter
+0x00d               	SEND	\r\n
+# Space bar
+0x020 Ctrl          	SEND	\000
+# PageUp
+0x021 Ctrl          	COMMAND	Scroll page up
+# PageDown
+0x022 Ctrl          	COMMAND	Scroll page down
+# Up arrow
+0x026 Ctrl          	COMMAND	Scroll line up
+# Down arrow
+0x028 Ctrl          	COMMAND	Scroll line down
+# Insert
+0x02d Ctrl          	COMMAND	Paste text from clipboard
+# Delete
+0x02e               	SEND	
+0x02e Ctrl          	COMMAND	Copy selection to clipboard
+# F1
+0x070               	SEND	\eOP
+# F2
+0x071               	SEND	\eOQ
+# F3
+0x072               	SEND	\eOR
+# F4
+0x073               	SEND	\eOS
+# Keypad Enter
+0x10d               	SEND	\r\n

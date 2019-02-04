@@ -1,0 +1,223 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1999-05-16 at 19:10:50 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+TLINK32 = TLink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_ktelnetdexe =  -LC:\BC5\LIB -Tpe -aa -V4.0 -c -v-
+ResLocalOptsAtW32_ktelnetdexe = 
+BLocalOptsAtW32_ktelnetdexe = 
+CompInheritOptsAt_ktelnetdexe = -IC:\BC5\INCLUDE;..\KRB\LIB\KCLIENT;..\..\INCLUDE;..\..\INCLUDE\WIN32 -D_RTLDLL;_BIDSDLL;_OWLDLL;STRICT;_OWLPCH;HAVE_CONFIG_H
+LinkerInheritOptsAt_ktelnetdexe = -x
+LinkerOptsAt_ktelnetdexe = $(LinkerLocalOptsAtW32_ktelnetdexe)
+ResOptsAt_ktelnetdexe = $(ResLocalOptsAtW32_ktelnetdexe)
+BOptsAt_ktelnetdexe = $(BLocalOptsAtW32_ktelnetdexe)
+
+#
+# Dependency List
+#
+Dep_Ktelnet = \
+   ktelnet.exe
+
+all: Ktelnet
+	copy Ktelnet.exe ..\..\wbin\KTelnet.exe
+
+!include "..\..\common.mak"
+ 
+Ktelnet : BccW32.cfg $(Dep_Ktelnet)
+  echo MakeNode
+
+Dep_ktelnetdexe = \
+   ..\..\wbin\ktcommon.lib\
+   ..\..\lib\wxrtl.lib\
+   ..\..\lib\kadm.lib\
+   ..\..\lib\roken.lib\
+   ..\..\lib\des.lib\
+   ..\..\lib\krb.lib\
+   OBJS\ftpparse.obj\
+   OBJS\ftpmach.obj\
+   OBJS\ftpconn.obj\
+   OBJS\serconn.obj\
+   OBJS\print.obj\
+   OBJS\profile.obj\
+   OBJS\aterm.obj\
+   OBJS\tickets.obj\
+   OBJS\crypto.obj\
+   OBJS\encropt.obj\
+   OBJS\authopt.obj\
+   OBJS\toptions.obj\
+   OBJS\negot.obj\
+   OBJS\telnet.obj\
+   OBJS\newconn.obj\
+   OBJS\termemul.obj\
+   OBJS\ansiemul.obj\
+   OBJS\main.obj\
+   OBJS\ktelnet.res
+
+ktelnet.exe : $(Dep_ktelnetdexe)
+  $(TLINK32) @&&|
+ $(IDE_LinkFLAGS32) $(LinkerOptsAt_ktelnetdexe) $(LinkerInheritOptsAt_ktelnetdexe) +
+C:\BC5\LIB\c0w32.obj+
+OBJS\ftpparse.obj+
+OBJS\ftpmach.obj+
+OBJS\ftpconn.obj+
+OBJS\serconn.obj+
+OBJS\print.obj+
+OBJS\profile.obj+
+OBJS\aterm.obj+
+OBJS\tickets.obj+
+OBJS\crypto.obj+
+OBJS\encropt.obj+
+OBJS\authopt.obj+
+OBJS\toptions.obj+
+OBJS\negot.obj+
+OBJS\telnet.obj+
+OBJS\newconn.obj+
+OBJS\termemul.obj+
+OBJS\ansiemul.obj+
+OBJS\main.obj
+$<,$*
+..\..\WBin\ktcommon.lib+
+..\..\lib\wxrtl.lib+
+..\..\lib\kadm.lib+
+..\..\lib\roken.lib+
+..\..\lib\des.lib+
+..\..\lib\krb.lib+
+C:\BC5\LIB\owlwti.lib+
+C:\BC5\LIB\bidsti.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+|
+   $(BRC32) OBJS\ktelnet.res $<
+
+OBJS\ftpparse.obj :  ftpparse.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ ftpparse.cpp
+|
+
+OBJS\ftpmach.obj :  ftpmach.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ ftpmach.cpp
+|
+
+OBJS\ftpconn.obj :  ftpconn.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ ftpconn.cpp
+|
+
+OBJS\serconn.obj :  serconn.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ serconn.cpp
+|
+
+OBJS\print.obj :  print.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ print.cpp
+|
+
+OBJS\profile.obj :  profile.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ profile.cpp
+|
+
+OBJS\aterm.obj :  aterm.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ aterm.cpp
+|
+
+OBJS\tickets.obj :  tickets.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ tickets.cpp
+|
+
+OBJS\crypto.obj :  crypto.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ crypto.cpp
+|
+
+OBJS\encropt.obj :  encropt.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ encropt.cpp
+|
+
+OBJS\authopt.obj :  authopt.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ authopt.cpp
+|
+
+OBJS\toptions.obj :  toptions.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ toptions.cpp
+|
+
+OBJS\negot.obj :  negot.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ negot.cpp
+|
+
+OBJS\telnet.obj :  telnet.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ telnet.cpp
+|
+
+OBJS\newconn.obj :  newconn.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ newconn.cpp
+|
+
+OBJS\termemul.obj :  termemul.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ termemul.cpp
+|
+
+OBJS\ansiemul.obj :  ansiemul.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ ansiemul.cpp
+|
+
+OBJS\main.obj :  main.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe) -o$@ main.cpp
+|
+
+OBJS\ktelnet.res :  ktelnet.rc ktelnet.rh emul.rh telnet.rh tickets.rc \
+	profile.rc print.rc ftp.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_ktelnetdexe) $(CompInheritOptsAt_ktelnetdexe)  -FO$@ ktelnet.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.bcp
+   Copy &&|
+-w
+-R
+-v-
+-vi
+-H
+-H=OBJS\KTELNET.CSM
+-WM
+-W
+-y
+| $@
+
+

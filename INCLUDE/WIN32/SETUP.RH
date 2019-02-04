@@ -1,0 +1,186 @@
+/*
+ * Copyright (c) 1998-2000 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+// Parameters for serial port
+#define IDD_SERPAR	10000
+#define IDC_BPS		101
+#define IDC_WORDSIZE	102
+#define IDC_PARITY	103
+#define IDC_STOPBITS	104
+#define IDC_FLOWCTL	105
+
+#define IDD_SETUP	10001
+
+#define IDC_NOTES	101
+#define IDC_FONT	102
+#define IDC_FONTSEL	103
+#define IDC_SCRBCK	104
+#define IDC_AUTOWRAP	105
+#define IDC_FTPPASS	106
+#define IDC_CARETSTYLE	107
+#define IDC_NOSCWINFN	108
+#define IDC_FTPHASH	109
+#define IDC_NOWARNINGBOX 110
+#define IDC_STLGINPSW	111
+#define IDC_FTPPROMPT	112
+#define IDC_KFTPAAUTH	113
+
+#define IDD_REALMS	10002
+#define IDD_EXTRA	10003
+
+#define IDD_MANAGER	10004
+#define IDC_TKTMGR	151
+#define IDC_BLMGR	152
+#define IDC_MSTNORM	153
+#define IDC_MSTTRAY	154
+#define IDC_MSTAUTO	155
+
+#define IDD_SEND	10005
+#define IDC_STCNRAW	161
+#define IDC_STCNCR	162
+#define IDC_STCLCR	163
+#define IDC_STDLY	164
+
+#define IDD_PRINTER	10006
+#define IDC_PRTYPE	171
+#define IDC_PRSETUP	172
+#define IDC_PRSHOW	173
+#define IDC_PRARG	174
+#define IDC_PRFONT	175
+#define IDC_PRFONTSEL	176
+#define IDC_PRAUTOEJECT	177
+
+#define IDD_DEBUG	10008
+// Note: Order of following symbols is important, see SETUP.CPP: CmBrowseDebug
+#define IDC_DBGCONN	181
+#define IDC_DBGFCONN	182
+#define IDC_DBGBCONN	183
+#define IDC_DBGEMUL	184
+#define IDC_DBGFEMUL	185
+#define IDC_DBGBEMUL	186
+#define IDC_DBGPRINT	187
+#define IDC_DBGFPRINT	188
+#define IDC_DBGBPRINT	189
+#define IDC_DBGKEYMAP	190
+#define IDC_DBGFKEYMAP	191
+#define IDC_DBGBKEYMAP	192
+
+#define IDD_CONFIG	10009
+#define IDM_STCONFIG	10009
+#define CM_ADDREALM	201
+#define CM_ADDSERVER	202
+#define CM_CHANGESERVER	203
+
+#define IDD_ADDREALM	10010
+#define IDC_EISERVICE	200
+
+#define IDD_SETDEFREALM	10011
+
+#define IDD_POPPROXY	10012
+#define IDC_PXYECHO	220
+#define IDC_PXYNORM	221
+#define IDC_PXYTRAY	222
+
+#define IDS_BROWSETYPES	10000
+#define IDS_DOMNODE	10001
+#define IDS_REALM	10002
+#define IDS_ALLTYPES	10003
+#define IDS_VARIAB	10004
+#define IDS_VALUE	10005
+#define IDS_PRTNONE	10006
+#define IDS_PRTFILE	10007
+#define IDS_PRTWINDOWS	10008
+#define IDS_PRTCOM1	10009
+#define IDS_PRTCOM2	10010
+#define IDS_PRTCOM3	10011
+#define IDS_PRTCOM4	10012
+#define IDS_PRTLPT1	10013
+#define IDS_PRTLPT2	10014
+#define IDS_PRTLPT3	10015
+#define IDS_PRNTYPES	10016
+#define	IDS_PRNFILE	10017
+#define IDS_BADPRINTER	10018
+#define IDS_PRPCNSAVE	10019
+#define IDS_PRPCNFDEV	10020
+#define IDS_CSWINSTD	10021
+#define IDS_CSBLOCK	10022
+#define IDS_CSULINE	10023
+#define IDS_SERVER	10024
+#define IDS_SERVICE	10025
+#define IDS_NEW		10026
+#define IDS_REALMDEL	10027
+#define IDS_ZEROLEN	10028
+#define IDS_IOERR	10029
+#define IDS_IMPSYNTAX2	10030
+#define IDS_UNKPRINT	10031
+
+#define IDS_CBR_110	10100
+#define IDS_CBR_300	10101
+#define IDS_CBR_600	10102
+#define IDS_CBR_1200	10103
+#define IDS_CBR_2400	10104
+#define IDS_CBR_4800	10105
+#define IDS_CBR_9600	10106
+#define IDS_CBR_14400	10107
+#define IDS_CBR_19200	10108
+#define IDS_CBR_38400	10109
+#define IDS_CBR_56000	10110
+#define IDS_CBR_57600	10111
+#define IDS_CBR_128000	10112
+#define IDS_CBR_115200	10113
+#define IDS_CBR_256000	10114
+#define IDS_4BIT	10115
+#define IDS_5BIT	10116
+#define IDS_6BIT	10117
+#define IDS_7BIT	10118
+#define IDS_8BIT	10119
+#define IDS_EVENPARITY	10120
+#define IDS_MARKPARITY	10121
+#define IDS_NOPARITY	10122
+#define IDS_ODDPARITY	10123
+#define IDS_ONESTOPBIT	10124
+#define IDS_ONE5STOPBITS 10125
+#define IDS_TWOSTOPBITS	10126
+#define IDS_SPFC_NONE	10127
+#define IDS_SPFC_HW	10128
+#define IDS_SPFC_XONXOFF 10129
+#define IDS_SPCE_ISO8859 10130
+#define IDS_SPCE_OEM	10131
+#define IDS_SPCE_SIS7BIT 10132
+
+#include <wxrtl.rh>

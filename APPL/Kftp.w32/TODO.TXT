@@ -1,0 +1,6 @@
+TODO KFTP:
+
+-  Hantering av ”verskrivning av filer vid bulkdownload.
+
+-  Hantering av directoryn (bulkdownload).
+

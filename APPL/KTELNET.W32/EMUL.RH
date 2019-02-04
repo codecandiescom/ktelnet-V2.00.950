@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 1998 Thomas Nyström and Stacken Computer Club
+ * (Royal Institute of Technology, Stockholm, Sweden).
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by the Kungliga Tekniska
+ *      Högskolan and its contributors.
+ * 
+ * 4. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#define IDI_FTP		1002
+
+#define CM_TEST			104
+
+#define CM_OPENCONN		6002
+#define CM_CLOSECONN		6003
+#define CM_WINSIZE_CHANGED	6004
+#define CM_TELNET_SEND_AYT	6005
+#define CM_TELNET_SEND_IP	6006
+#define CM_TELNET_SEND_AO	6007
+#define CM_TELNET_SEND_EC	6008
+#define CM_TELNET_SEND_EL	6009
+#define CM_TELNET_SEND_BRK	6010
+
+// Ok, here som tricky thing: 6011 can't be used as the number for
+// CM_PROFILE_EDIT. Because CM_PROFILE_EDIT is the first choice of
+// a menu the whole menu will be disabled if 6010 is disabled.
+// 6010 is only enabled during a telnet session, because 6010 is
+// CM_TELNET_SEND_BRK. Still, someone could have bind the command
+// CM_PROFILE_EDIT to a key and the command code is saved in the
+// registry, in this case the 6011 code is converted to 6024.n
+#define CM_PROFILE_EDIT_OLD	6011
+#define CM_PROFILE_DEFAULT	6012
+#define CM_PROFILE_IMPORT	6013
+#define CM_PROFILE_EXPORT	6014
+#define CM_SCROLLBASE		6015
+//				6015	// SB_LINEUP
+//				6016	// SB_LINEDOWN
+//				6017	// SB_PAGEUP
+//				6018	// SB_PAGEDOWN
+#define CM_TERMINAL_RESET	6019
+#define CM_CAPTURE		6020
+#define CM_ENDCAPTURE		6021
+#define CM_SENDTEXT		6022
+#define CM_PRINTEREJECT		6023
+//				6024	// Reserved.
+#define CM_PROFILE_EDIT		6025
+#define CM_SERIALSETUP		6026
+#define CM_PRINTSELECTED	6027
+#define CM_DIRECTCOPY		6028
+
+#define SB_LINEUP           0
+#define SB_LINEDOWN         1
+#define SB_PAGEUP           2
+#define SB_PAGEDOWN         3
+
+#define IDS_CNSAVREG		5024

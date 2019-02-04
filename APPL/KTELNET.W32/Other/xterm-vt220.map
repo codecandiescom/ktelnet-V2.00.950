@@ -1,0 +1,95 @@
+# BackSpace
+0x008               	SEND	\b
+# Tab
+0x009               	SEND	\t
+# Enter
+0x00d               	SEND	\r
+# Space bar
+0x020 Ctrl          	SEND	\000
+# PageUp
+0x021 Ctrl          	COMMAND	Scroll page up
+0x021               	SEND	\e[5~
+# PageDown
+0x022 Ctrl          	SEND	\e[6~
+0x022               	SEND	\e[6~
+# End
+0x023               	SEND	\eOF
+# Home
+0x024               	SEND	\eOH
+# Up arrow
+0x026 Ctrl          	COMMAND	Scroll line up
+# Down arrow
+0x028 Ctrl          	COMMAND	Scroll line down
+# Insert
+0x02d Ctrl          	COMMAND	Paste text from clipboard
+0x02d               	SEND	\e[2~
+# Delete
+0x02e               	SEND	\e[3~
+0x02e Ctrl          	COMMAND	Copy selection to clipboard
+# Letter A
+0x041            Alt	SEND	\eA
+# Letter B
+0x042            Alt	SEND	\eB
+# Letter C
+0x043            Alt	SEND	\eC
+# Letter D
+0x044            Alt	SEND	\eD
+# Letter E
+0x045            Alt	SEND	\eE
+# Letter F
+0x046            Alt	SEND	\eF
+# F1
+0x070 Ctrl          	SEND	\e[25~
+0x070               	SEND	\eOP
+# F2
+0x071 Ctrl          	SEND	\e[26~
+0x071               	SEND	\eOQ
+# F3
+0x072 Ctrl          	SEND	\e[28~
+0x072               	SEND	\eOR
+# F4
+0x073 Ctrl          	SEND	\e[29~
+0x073               	SEND	\eOS
+# F5
+0x074 Ctrl          	SEND	\e[31~
+0x074               	SEND	\e[15~
+# F6
+0x075 Ctrl          	SEND	\e[32~
+0x075               	SEND	\e[17~
+# F7
+0x076 Ctrl          	SEND	\e[33~
+0x076               	SEND	\e[18~
+# F8
+0x077 Ctrl          	SEND	\e[34~
+0x077               	SEND	\e[19~
+# F9
+0x078               	SEND	\e[20~
+# F10
+0x079               	SEND	\e[21~
+# F11
+0x07a               	SEND	\e[23~
+# F12
+0x07b               	SEND	\e[24~
+# F13
+0x07c               	SEND	\e[25~
+# F14
+0x07d               	SEND	\e[26~
+# F15
+0x07e               	SEND	\e[28~
+# F16
+0x07f Ctrl          	SEND	\e[31~
+0x07f               	SEND	\e[29~
+# F17
+0x080 Ctrl          	WINDOWS
+0x080               	SEND	\e[31~
+# F18
+0x081 Ctrl          	WINDOWS
+0x081               	SEND	\e[32~
+# F19
+0x082 Ctrl          	WINDOWS
+0x082               	SEND	\e[33~
+# F20
+0x083 Ctrl          	WINDOWS
+0x083               	SEND	\e[34~
+# Keypad Enter
+0x10d               	SEND	\r

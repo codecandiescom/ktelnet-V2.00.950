@@ -1,0 +1,50 @@
+# Letter A
+0x041            Alt	SEND	\eA
+# Letter B
+0x042            Alt	SEND	\eB
+# Letter C
+0x043            Alt	SEND	\eC
+# Letter D
+0x044            Alt	SEND	\eD
+# Letter E
+0x045            Alt	SEND	\eE
+# Letter F
+0x046            Alt	SEND	\eF
+# Letter G
+0x047            Alt	SEND	\eG
+# Letter H
+0x048            Alt	SEND	\eH
+# Letter I
+0x049            Alt	SEND	\eI
+# Letter J
+0x04a            Alt	SEND	\eJ
+# Letter K
+0x04b            Alt	SEND	\eK
+# Letter L
+0x04c            Alt	SEND	\eL
+# Letter M
+0x04d            Alt	SEND	\eM
+# Letter N
+0x04e            Alt	SEND	\eN
+# Letter O
+0x04f            Alt	SEND	\eO
+# Letter P
+0x050            Alt	SEND	\eP
+# Letter Q
+0x051            Alt	SEND	\eQ
+# Letter R
+0x052            Alt	SEND	\eR
+# Letter S
+0x053            Alt	SEND	\eS
+# Letter T
+0x054            Alt	SEND	\eT
+# Letter U
+0x055            Alt	SEND	\eU
+# Letter V
+0x056            Alt	SEND	\eV
+# Letter X
+0x058            Alt	SEND	\eX
+# Letter Y
+0x059            Alt	SEND	\eY
+# Letter Z
+0x05a            Alt	SEND	\eZ

@@ -1,0 +1,162 @@
+#
+# Borland C++ IDE generated makefile
+# Generated 1998-11-08 at 20:53:05 
+#
+.AUTODEPEND
+
+
+#
+# Borland C++ tools
+#
+IMPLIB  = Implib
+BCC32   = Bcc32 +BccW32.cfg 
+TLINK32 = TLink32
+TLIB    = TLib
+BRC32   = Brc32
+TASM32  = Tasm32
+#
+# IDE macros
+#
+
+
+#
+# Options
+#
+IDE_LinkFLAGS32 =  -LC:\BC5\LIB
+IDE_ResFLAGS32 = 
+LinkerLocalOptsAtW32_WXrtldlib =  -v- -LC:\BC5\LIB -Tpd -aa -V4.0 -c
+ResLocalOptsAtW32_WXrtldlib = 
+BLocalOptsAtW32_WXrtldlib = 
+CompInheritOptsAt_WXrtldlib = -IC:\BC5\INCLUDE;..\..\INCLUDE\WIN32 -D_RTLDLL;_BIDSDLL;_OWLDLL;STRICT;_OWLPCH;
+LinkerInheritOptsAt_WXrtldlib = -x
+LinkerOptsAt_WXrtldlib = $(LinkerLocalOptsAtW32_WXrtldlib)
+ResOptsAt_WXrtldlib = $(ResLocalOptsAtW32_WXrtldlib)
+BOptsAt_WXrtldlib = $(BLocalOptsAtW32_WXrtldlib)
+
+#
+# Dependency List
+#
+Dep_WXrtl = \
+   WXrtl.lib
+
+all: WXrtl
+	copy WXrtl.lib ..
+	copy WXrtl.dll ..\..\wbin\WXrtl.dll
+	copy WXrtl.rh ..\..\include\win32\WXrtl.rh
+
+!include "..\..\common.mak"
+ 
+WXrtl : BccW32.cfg $(Dep_WXrtl)
+  echo MakeNode
+
+WXrtl.lib : WXrtl.DLL
+  $(IMPLIB) $@ WXrtl.DLL
+
+
+Dep_WXrtldDLL = \
+   OBJS\parse.obj\
+   OBJS\wstrerr.obj\
+   OBJS\xrwin.obj\
+   OBJS\inputh.obj\
+   OBJS\xrcombo.obj\
+   OBJS\prpsetup.obj\
+   OBJS\regist.obj\
+   OBJS\showresp.obj\
+   OBJS\fbrowse.obj\
+   OBJS\xrtl.obj\
+   OBJS\xrtl.res
+
+WXrtl.DLL : $(Dep_WXrtldDLL)
+  $(TLINK32) @&&|
+ /v- $(IDE_LinkFLAGS32) $(LinkerOptsAt_WXrtldlib) $(LinkerInheritOptsAt_WXrtldlib) +
+C:\BC5\LIB\c0d32.obj+
+OBJS\parse.obj+
+OBJS\wstrerr.obj+
+OBJS\xrwin.obj+
+OBJS\inputh.obj+
+OBJS\xrcombo.obj+
+OBJS\prpsetup.obj+
+OBJS\regist.obj+
+OBJS\showresp.obj+
+OBJS\fbrowse.obj+
+OBJS\xrtl.obj
+$<,$*
+C:\BC5\LIB\owlwti.lib+
+C:\BC5\LIB\bidsti.lib+
+C:\BC5\LIB\ctl3d32.lib+
+C:\BC5\LIB\ole2w32.lib+
+C:\BC5\LIB\import32.lib+
+C:\BC5\LIB\cw32mti.lib
+
+|
+   $(BRC32) OBJS\xrtl.res $<
+
+OBJS\parse.obj :  parse.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ parse.cpp
+|
+
+OBJS\wstrerr.obj :  wstrerr.c
+  $(BCC32) -H=OBJS\CMOD.CSM -P- -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ wstrerr.c
+|
+
+OBJS\xrwin.obj :  xrwin.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ xrwin.cpp
+|
+
+OBJS\inputh.obj :  inputh.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ inputh.cpp
+|
+
+OBJS\xrcombo.obj :  xrcombo.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ xrcombo.cpp
+|
+
+OBJS\prpsetup.obj :  prpsetup.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ prpsetup.cpp
+|
+
+OBJS\regist.obj :  regist.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ regist.cpp
+|
+
+OBJS\showresp.obj :  showresp.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ showresp.cpp
+|
+
+OBJS\fbrowse.obj :  fbrowse.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ fbrowse.cpp
+|
+
+OBJS\xrtl.obj :  xrtl.cpp
+  $(BCC32) -c @&&|
+ $(CompOptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib) -o$@ xrtl.cpp
+|
+
+OBJS\xrtl.res :  xrtl.rc
+  $(BRC32) -R @&&|
+ $(IDE_ResFLAGS32) $(ROptsAt_WXrtldlib) $(CompInheritOptsAt_WXrtldlib)  -FO$@ xrtl.rc
+|
+# Compiler configuration file
+BccW32.cfg : makefile.bcp
+   Copy &&|
+-w
+-R
+-v-
+-vi
+-H
+-H=OBJS\WXRTL.CSM
+-y
+-WD
+-WM
+| $@
+
+
